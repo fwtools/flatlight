@@ -1,0 +1,6 @@
+# minified versions
+*.min.css
+*.min.js
+
+# temp files
+*~
