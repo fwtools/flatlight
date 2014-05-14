@@ -1,0 +1,98 @@
+#listrow_int ~ .listcaption { margin-top: 4px; }
+#listrow_int ~ .listcaption a { color: #eee; }
+#listrow_int ~ .listcaption a:hover,
+#listrow_int ~ .listcaption a:focus { color: #fff; }
+
+#filterrow { padding: 1px 3px; background: #ddd; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
+#filterrow b { padding: 0; }
+
+.listitemrow { position: relative; padding: 2px 3px; padding-left: 9px;
+    background: #fafafa; width: calc(100% + 12px); margin: 0 -6px; min-height: 18px; }
+.listitemrow:nth-of-type(2n) { background: #eee; }
+
+.listitemrow ~ form { width: 0; height: 0; margin: 0; padding: 0; }
+
+.listitemrow * { z-index: 2; }
+
+/* :TODO: What does this change? */
+span.medium {
+    display: inline-block;
+}
+
+#filterrow ~ .listitemrow br {
+    display: none;
+}
+
+.listitemrow .itemequipped,
+.listitemrow .itemmagic,
+.listitemrow .itemamount {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 11px;
+    color: #d00;
+}
+
+.listitemrow .itemamount { padding-right: 2px; }
+
+.itemmagic { color: #0a0; }
+
+#filterrow ~ .listitemrow .itemmagic { width: 0; font-size: 0; color: transparent; }
+#filterrow ~ .listitemrow .itemmagic:before {
+    content: ""; display: block; position: absolute; width: auto;
+    top: 0; left: 1px; bottom: 0; width: 4px;
+}
+
+#filterrow ~ .listitemrow .itemmagic:before             { background: #bb7857; }
+#filterrow ~ .listitemrow .itemmagic.magicextend:before { background: #83bb57; }
+
+/*
+ * Item-Komprimierung
+ */
+
+.listitemrow,
+.listitemrow br ~ a,
+.listitemrow br ~ a:hover { display: block; font-size: 0; color: transparent; }
+.listitemrow b { display: inline-block; padding-right: 58px; font-size: 11px; color: #333; }
+.listitemrow img { display: none; }
+
+.listitemrow a[href^="item.php?action=activate"]:after,
+.listitemrow a[href^="item.php?action=watch"]:after,
+.listitemrow a[href^="item.php?action=transfer1"]:after,
+.listitemrow a[href^="item.php?action=manytransfer1"]:after,
+.listitemrow a[href^="item.php?action=manydrop"]:after { color: #666;
+    font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; font-size: 14px; }
+
+.listitemrow a[href^="item.php?action=activate"],
+.listitemrow a[href^="item.php?action=activate"]:hover,
+.listitemrow a[href^="item.php?action=watch"],
+.listitemrow a[href^="item.php?action=watch"]:hover,
+.listitemrow a[href^="item.php?action=transfer1"],
+.listitemrow a[href^="item.php?action=transfer1"]:hover,
+.listitemrow a[href^="item.php?action=manytransfer1"],
+.listitemrow a[href^="item.php?action=manytransfer1"]:hover,
+.listitemrow a[href^="item.php?action=manydrop"],
+.listitemrow a[href^="item.php?action=manydrop"]:hover { text-decoration: none; width: 16px; height: 16px;
+    position: absolute; top: 3px; z-index: 3; }
+
+.listitemrow a[href^="item.php?action=activate"] { right: 49px; }
+.listitemrow a[href^="item.php?action=watch"] { right: 33px; }
+.listitemrow a[href^="item.php?action=transfer1"] { right: 17px; }
+.listitemrow a[href^="item.php?action=manytransfer1"] { right: 17px; }
+.listitemrow a[href^="item.php?action=manydrop"] { right: 1px; }
+
+.listitemrow a[href^="item.php?action=activate"]:after { content: "\f10c"; }
+.listitemrow a[href^="item.php?action=watch"]:after { content: "\f06e"; font-size: 12px; }
+.listitemrow a[href^="item.php?action=transfer1"]:after { content: "\f138"; }
+.listitemrow a[href^="item.php?action=manytransfer1"]:after { content: "\f138"; }
+.listitemrow a[href^="item.php?action=manydrop"]:after { content: "\f13a"; }
+
+.listitemrow a[href^="item.php?action=watch"]:hover:after,
+.listitemrow a[href^="item.php?action=transfer1"]:hover:after,
+.listitemrow a[href^="item.php?action=manytransfer1"]:hover:after,
+.listitemrow a[href^="item.php?action=manydrop"]:hover:after,
+.listitemrow a[href^="item.php?action=activate"]:hover:after { color: #2980b9; }
+
+.listitemrow a[href^="item.php?action=watch"] img,
+.listitemrow a[href^="item.php?action=transfer1"] img,
+.listitemrow a[href^="item.php?action=manytransfer1"] img,
+.listitemrow a[href^="item.php?action=manydrop"] img { display: none; }

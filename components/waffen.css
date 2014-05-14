@@ -1,5 +1,4 @@
-#listrow_attackw,#listrow_defensew{height:0;border:0;padding:0;margin:0;font-size:0;color:transparent}
-#listrow_attackw a:after,#listrow_defensew a:after{display:inline-block;float:right;font-size:12px;margin-right:5px;margin-top:-17px;}
+#listrow_attackw a:after,#listrow_defensew a:after{display:inline-block;float:right;font-size:11px;margin-right:3px;margin-top:-18px;height:18px; line-height: 18px;}
 
 #listrow_attackw[title$='1%'] a:after,#listrow_defensew[title$='1%'] a:after{content:'1%'}
 #listrow_attackw[title$='2%'] a:after,#listrow_defensew[title$='2%'] a:after{content:'2%'}
@@ -224,4 +223,4 @@
 #listrow_defensew[title$=" 2%"] a:after,
 #listrow_defensew[title$=" 1%"] a:after {color:#a00}
 
-#listrow_attackw:not([title]) a[href="item.php?action=aselect"]:after,#listrow_defensew:not([title]) a[href="item.php?action=dselect"]:after{content:"—";font-weight:normal;color:#333 !important;}
+#listrow_attackw:not([title]) a[href="item.php?action=aselect"]:after,#listrow_defensew:not([title]) a[href="item.php?action=dselect"]:after{content:"\2014";font-weight:normal;color:#333 !important;}

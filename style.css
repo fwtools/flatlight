@@ -1,115 +1,47 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+@import url('components/abilities.css');
+@import url('components/chat.css');
+@import url('components/clanmenu.css');
+@import url('components/frames.css');
+@import url('components/inventory.css');
+@import url('components/items.css');
+@import url('components/main.css');
+@import url('components/map.css');
+@import url('components/phasenenergie.css');
+@import url('components/schnellzauber.css');
+@import url('components/sponsoren.css');
+@import url('components/status_time.css');
+@import url('components/waffen.css');
+@import url('components/zauberpuzzle.css');
 
-/**********************************************************************************************************
- * Freewar-Style
- * 
- * Name: LightNoise
- * Copyright: (c) 2014, Cembon
- * Autor: Cembon (http://fw.galaxycore.de)
- * 
- * Du darfst diesen Style oder Teile davon nicht:
- *  - veröffentlichen, solange du dafür nicht die Erlaubnis bekommen hast.
- * 
- * Eine Erlaubnis kann über das Forum, das Wiki oder in Welt 11 eingeholt werden.
- *    
- *    Es geht dabei vor allem darum, dass ich weiß, wer den Style in welcher Weise 
- *    abgeändert hat und welche Versionen es gibt. Besonders gute Versionen werden in
- *    Absprache evtl. auch auf der Homepage verlinkt.
- *
- **********************************************************************************************************/
 
-/**********************************************************************************************************
- * 
- * Some Icons from http://www.fatcow.com/free-icons
- * 
- **********************************************************************************************************/
- 
- 
-/* > Allgemein */
-body, 
-th, 
-td { font-size: 12px; font-family: 'Open Sans', sans-serif; line-height: 125%; }
-body, 
+/*******************************************************************************
+ * LightNoise v3.0 - (c) 2014, Cembon
+ ******************************************************************************/
+
+html, body { margin: 0; padding: 0; }
+* { box-sizing: border-box; }
+html { background: #fafafa; }
+body { font-size: 12px; font-family: 'Open Sans', sans-serif; line-height: 1.25; color: #222; }
+
+th, td { font-size: 12px; font-family: 'Open Sans'; line-height: 1.25; }
 p { padding: 0; margin: 0; }
 
-/* > Links */
-a { color: #c50; font-weight: bold; text-decoration: none; }
-a:hover { color: #f80; }
-
-.framemainbg { background-color: #fff; color: #333; background-image: url(../i/noise_gray.png); background-attachment: fixed; }
-
-/* > Sidebar (Itemframe, Mapframe, Menüframe) */
-.frameitembg, 
-.framemapbg, 
-.framemenubg { background-color: #fff; color: #333; background-image: url(../i/noise_gray.png); background-attachment: fixed; }
-
-/* > > Itemframe */
-.frameitembg { padding: 5px; font-size: 11px; }
-
-/* > > Menüframe */
-.framemenubg { background-image: url(../i/menufr.png); background-position: left bottom; font-size: 11px; color: #eee; }
-.framemenubg a { color: #000; font-weight: bold; }
-.framemenubg a:hover { color: #eee; text-decoration: underline; }
-.framemenubg:before { position: absolute; left: 8px; bottom: 6px; right: 8px; top: 0; border: 1px solid rgba(0,0,0,.3); border-top: 0px solid transparent; 
-	background: #eee url(../i/noise.png) left top repeat-x; box-shadow: 0 0 4px rgba(0,0,0,.5); border-radius: 0 0 6px 6px; opacity: 0.3; content: ""; z-index: -1; }
-
-/* > > Mapframe */
-.framemapbg { background-image: url(../i/menufr.png); background-position: left top; background-repeat: repeat-x; padding: 12px 15px 0 15px; }
-.framemapbg:before { position: absolute; left: 8px; top: 8px; right: 8px; bottom: 0; border: 1px solid rgba(0,0,0,.3); border-bottom: 0px solid transparent;
-	background: #fff; box-shadow: 0 0 4px rgba(0,0,0,.5); border-radius: 9px 9px 0 0; opacity: 0.3; content: ""; z-index: -1; }
-.framemapbg img[src*="zahl"] { opacity: .75; }
-
-/* .framemapbg table { background-color: black; }
-.framemapbg table tr:first-of-type td,
-.framemapbg table tr:last-of-type td,
-.framemapbg table tr td:first-of-type,
-.framemapbg table tr td:last-of-type { opacity: .6; } */
-
-/* > > > Karte */
-.nocango { width: 50px; height: 50px; border: 0; display: block; }
-.nocango:hover { background: transparent url(../i/nocango.png) left top no-repeat; cursor: default !important; }
-a[href="map.php?reload=1"] { position: absolute; left: 16px; font-size: 11px; }
-a[href="map.php?reload=1"]:after { content: "Aktualisieren"; }
-a[href="map.php?reload=1"] img { display: inline-block; width: 0px; height: 11px; background: url(../i/arrow_refresh_small.png); 
-	background-repeat: no-repeat; margin-left: 3px; padding-left: 11px; margin-top: 1px; overflow: hidden; }
-
-.positiontext { text-align: right; font-size: 11px; color: #555; padding: 0px 9px 2px 3px; }
-.positiontext a { color: #058; text-decoration: none; }
-.positiontext a:hover { color: #08c; }
-
-#test { text-align: center; font-size: 9px; color: #000; width: 242px; padding: 0 3px; min-height: 14px; margin: 0 auto; }
-.stdjpg { opacity: .9 !important; background-image: url(../i/berg.png) !important; }
-
-.framemapbg td { display: inline-block; position: relative; width: 50px; height: 50px; }
-
-/* > Chatframe (Form) */
-.framechatformbg { background: #e7effb url(../i/noise_gray.png); border-top: 0px solid #000 !important; }
-.framechatformbg table { border-top: 0px solid #444 !important; }
-.framechatformbg td { color: #111; }
-
-/* > Chatframe (Text) */
-.framechattextbg { background: #f1f5fb url(../i/noise_gray.png) fixed; padding: 5px 7px; }
-.framechattextbg:after { background-image: url(../i/noise.png); background-repeat: repeat-x; background-attachment: fixed;
-	background-position: left top; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 1000; content: ""; }
-.framechattextbg:before { background-image: url(../i/noiset.png); background-repeat: repeat-x; background-attachment: fixed;
-	background-position: left bottom; position: fixed; left: 0; right: 0; bottom: 0; height: 5px; z-index: 1000; content: ""; }
-.framechattextbg p { font-size: 12px; }
+a { color: #2980b9; font-weight: bold; text-decoration: none; }
+a:hover { color: #3498db; text-decoration: underline; }
 
 /* > Special > Sponsorsterne */
-img[src$="sponsor.gif"], 
-img[src$="sponsor2.gif"], 
-img[src$="sponsor3.gif"] { display: inline-block; width: 0px; height: 10px; 
-	background: url(../i/sponsor_o.png); background-repeat: no-repeat; padding-left: 11px; overflow: hidden; margin-right: 2px; }
-img[src$="sponsor2.gif"] { background: url(../i/sponsor_g.png); }
-img[src$="sponsor3.gif"] { background: url(../i/sponsor_b.png); }
-
-/* > Chatframe (Text) > Chatfarben */
-
-#chat_text { border-radius: 4px; background-color: #f9f9f9; border: 1px solid #bbb; border-left: 1px solid #aaa; border-top: 1px solid #ccc; }
+img[src$="sponsor.gif"],
+img[src$="sponsor2.gif"],
+img[src$="sponsor3.gif"] { display: inline-block; width: 0px; height: 10px;
+	background: url(i/sponsor_o.png); background-repeat: no-repeat; padding-left: 11px; overflow: hidden; margin-right: 2px; }
+img[src$="sponsor2.gif"] { background: url(i/sponsor_g.png); }
+img[src$="sponsor3.gif"] { background: url(i/sponsor_b.png); }
 
 /* > Special > Buttons */
-input[type="submit"], 
-.framemapbg br + a[href$="logout.php"], 
+input[type="submit"],
+.framemapbg br + a[href$="logout.php"],
 .framemapbg br + a[href$="logout.php"] + br + a,
 form[action="friends.php?action=insertuser"] input[type="submit"],
 #ttContent input[type="submit"] { box-shadow: 0px 1px 0px 0px #ffffff inset; background: -moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
@@ -118,8 +50,8 @@ form[action="friends.php?action=insertuser"] input[type="submit"],
 	font-size: 11px; margin: 0 1px; cursor: pointer; }
 
 input[type="submit"]:hover,
-.framemapbg br + a[href$="logout.php"]:hover, 
-.framemapbg br + a[href$="logout.php"] + br + a:hover, 
+.framemapbg br + a[href$="logout.php"]:hover,
+.framemapbg br + a[href$="logout.php"] + br + a:hover,
 form[action="friends.php?action=insertuser"] input[type="submit"]:hover,
 #ttContent input[type="submit"]:hover { background: -moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
 	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff) ); }
@@ -127,54 +59,11 @@ form[action="friends.php?action=insertuser"] input[type="submit"]:hover,
 input[type="submit"] { margin-top: 3px; }
 
 /* Logout-Screen */
-.framemapbg br + a[href$="logout.php"], 
+.framemapbg br + a[href$="logout.php"],
 .framemapbg br + a[href$="logout.php"] + br + a { width: 75px; font-weight: normal; margin-top: 6px; }
 .framemapbg br + a[href$="logout.php"] { color: #0a0; }
 .framemapbg br + a[href$="logout.php"] + br + a { color: #d00; }
 /* /Logout-Screen */
-
-/* > Chatcolors */
-.chattext { color: #333; }
-.chattextscream, 
-.submitschreien { color: #05c; }
-.chattextclan, 
-.submitclan { color: #c00; }
-.chattextgroup, 
-.submitgroup { color: #aa5600; }
-.chattextinfo { color: #c90; font-style: italic; }
-.chattextwhisper, 
-.submitwhisper { color: #380; }
-.chattextglobal, 
-.submitglobalchat { color: #00714c; color: #00553e; color: #c91960; }
-
-.worldsay, 
-.worldsay table, 
-.worldsay tbody, 
-.worldsay table td { font-size: 10px; }
-.worldsay table, 
-.worldsay tbody { border-collapse: separate; }
-
-/* grüne Worldsays */
-.worldsay tr[bgcolor="#99EE99"]  { background-color: transparent !important; color: #d99 !important; }
-.worldsay tr[bgcolor="#99EE99"] td { background-color: #ff9 !important; color: #333 !important; border-radius: 4px; }
-
-/* blaue Worldsays */
-.worldsay tr[bgcolor="#C1CEF9"]  { background-color: transparent !important; color: #d99 !important; }
-.worldsay tr[bgcolor="#C1CEF9"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important; border-radius: 2px; border: 1px solid rgba(0,0,0,.2) !important; box-shadow: 0 0 4px rgba(0,0,0,.2); }
-
-/* rote Worldsays */
-.worldsay tr[bgcolor="#FFAEA1"]  { background-color: transparent !important; color: #d99 !important; }
-.worldsay tr[bgcolor="#FFAEA1"] td { background-color: #FFAEA1 !important; color: #333 !important; border-radius: 4px; }
-
-/* Hochhalten */
-table[style="border: 1px solid #C85424;"] {	border-radius: 2px;	border: 1px solid rgba(0,0,0,.3) !important; box-shadow: 0 0 4px rgba(0,0,0,.2); }
-table[style="border: 1px solid #C85424;"] td { color: #111; }
-
-/* > Bilder im Chat */
-img[src="http://voting.gdynamite.de/images/gd_animbutton.gif"] { display: none; }
-
-/* > Trenngrafik & Chaticons ausblenden */
-img[src*="item_divider.gif"], .chatpics { display: none; }
 
 /* > Lebenspunkte & Erweitere Anzeige */
 .healthok, #listrow_attackp .valueincreased, #listrow_defensep .valueincreased {
@@ -189,388 +78,25 @@ img[src*="item_divider.gif"], .chatpics { display: none; }
 	color: #f90;
 }
 
-/* Schnellzauber */
-
-#fastspell tr > td + td > b {
-	color: transparent;
-}
-
-a.fast_spell_set,
-span.fast_spell_set {
-	margin-left: -5px;
-	margin-right: -5px;
-	padding: 0 5px;
-	display: inline-block;
-	text-decoration: none;
-}
-
-span.fast_spell_set {
-	box-shadow: 0 0 3px #08f inset;
-	border: 1px solid #08f;
-	color: #08f;
-}
-
-a.fast_spell_set {
-	border: 1px solid #ccc;
-	color: #555;
-}
-
-#fast_spell_set_1, #fast_spell_set_2, #fast_spell_set_3 {
-	border-radius: 4px;
-	margin: 2px -2px;
-}
-
-.frameitembg #fastspell {
-	background: rgba(255,255,255,.5) left top repeat;
-	border: 1px solid #ccc;
-	padding: 0px 5px;
-	border-radius: 4px 4px 0 0;
-	box-shadow: 0 3px 3px -3px rgba(0,0,0,.15);
-	z-index: 30;
-}
-
-.frameitembg #fastspell td {
-	color: #111;
-}
-
-table[id^="fastspell"]:not(#fastspell) {
-	margin: 0;
-	padding: 1px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ddd;
-	background-color: #f7f7f7;
-}
-
-table[id^="fastspell"] + .small {
-	display: block;
-	margin-bottom: 2px;
-	padding: 3px 1px;
-	border: 1px solid #ccc;
-	border-top: 0;
-	background-color: #eee;
-	font-size: 10px;
-	border-radius: 0 0 4px 4px;
-	text-align: center;
-	box-shadow: 0 3px 3px -3px rgba(0,0,0,.15) inset;
-}
-
-table[id^="fastspell"]:not(#fastspell):last-of-type + .small a {
-	color: #666;
-	text-decoration: none;
-}
-
-table[id^="fastspell"]:not(#fastspell):last-of-type + .small a:hover {
-	color: #444;
-}
-
-table[id^="fastspell"]:not(#fastspell):last-of-type + .small br {
-	display: none;
-}
-
-table[id^="fastspell"]:not(#fastspell):last-of-type + .small:empty {
-	display: none;
-}
-
-table[id^="fastspell"]:not(#fastspell) td {
-	font-size: 10px;
-	color: #666;
-}
-
-table[id^="fastspell"]:not(#fastspell) a {
-	font-size: 11px;
-	color: #555;
-	text-decoration: none;
-}
-
-table[id^="fastspell"]:not(#fastspell) a:hover {
-	color: #111;
-}
-
-.fastitemamount {
-	color: #08f !important;
-}
-
-table[id^="fastspell"]:not(#fastspell) img[src$="close.gif"], #close1 img[src$="close.gif"], #close2 img[src$="close.gif"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 10px; 
-	background: url(../i/rcsmall.png); 
-	background-repeat: no-repeat; 
-	margin-top: 1px;
-	padding-left: 10px; 
-	overflow: hidden; 
-}
-
-/* Inventar */
-
-.frameitembg .listcaption {
-	margin: 2px 0 0 0;
-	padding: 2px 3px;
-	border: 1px solid #ccc;
-	border-radius: 4px 4px 0 0;
-	background: url(../i/listcaption.png) left center repeat-x;
-	text-align: center;
-}
-
-/* Inventar - wenn geschlossen */
-table[id^="fastspell"]:last-of-type + .small + p:last-of-type[class="listcaption"] {
-	border-radius: 4px;
-}
-
-.listrow {
-	border: 1px solid #ccc;
-	background: url(../i/white.png);
-	padding: 1px;
-	opacity: .9;
-	border-top: 0;
-	font-size: 11px;
-}
-
-#listrow_money > b,
-#listrow_lifep > b,
-#listrow_int > b,
-#listrow_attackp > b,
-#listrow_attackw > b,
-#listrow_defensep > b,
-#listrow_defensew > b {
-	font-weight: normal;
-}
-
-#listrow_money,
-#listrow_lifep,
-#listrow_int,
-#listrow_attackp,
-#listrow_attackw,
-#listrow_defensep,
-#listrow_defensew {
-	font-weight: bold;
-}
-
-#listrow_status:empty,
-#listrow_status span:empty {
-	display: none;
-}
-
-#listrow_aka_battlep {
-	font-size: 9px;
-	text-align: center;
-}
-
-/*
- * Items im Inventar
- */
- 
-#filterrow {
-	padding: 1px 3px;
-	border: 1px solid #ccc;
-	border-top: 0;
-	border-radius: 0 0 4px 4px;
-	background: rgba(255,255,255,.5);
-	text-align: center;
-}
-
-#filterrow + .listitemrow {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	margin-top: 2px;
-}
-
-#filterrow ~ .listitemrow {
-	position: relative;
-	padding: 2px 3px;
-	padding-left: 7px;
-	background: rgba(255,255,255,.5);
-	border: 1px solid #ccc;
-	border-bottom: 0;
-}
-
-#filterrow ~ .listitemrow:last-of-type {
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-	border-bottom: 1px solid #ccc;
-}
-
-/* :TODO: What does this change? */
-span.medium {
-	display: inline-block;
-}
-
-#filterrow ~ .listitemrow br {
-	display: none;
-}
-
-.listitemrow .itemequipped,
-.listitemrow .itemmagic,
-.listitemrow .itemamount {
-	display: inline-block;
-	font-weight: bold;
-	font-size: 11px;
-	color: #d00;
-}
-
-.listitemrow .itemamount { padding-right: 2px; }
-
-.itemmagic { color: #0a0; }
-
-#filterrow ~ .listitemrow .itemmagic { width: 0px; font-size: 0px; color: transparent; }
-#filterrow ~ .listitemrow .itemmagic:before {
-	content: ""; display: block; position: absolute; width: 2px;
-	top: 0; left: 0; bottom: 0;
-}
-
-#filterrow ~ .listitemrow .itemmagic:before             { background: #bb7857; }
-#filterrow ~ .listitemrow .itemmagic.magicextend:before { background: #83bb57; }
-
-/*
- * Item-Komprimierung
- */
-
-#filterrow ~ .listitemrow,
-#filterrow ~ .listitemrow br ~ a,
-#filterrow ~ .listitemrow br ~ a:hover {
-	display: block;
-	font-size: 0px;
-	color: transparent;
-}
-
-#filterrow ~ .listitemrow b {
-	display: inline-block;
-	max-width: 160px;
-	font-size: 11px;
-	color: #333;
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=activate"], 
-#filterrow ~ .listitemrow a[href^="item.php?action=activate"]:hover, 
-#filterrow ~ .listitemrow a:not([href^="item.php?action=activate"]) img {
-	display: inline-block;
-	width: 0;
-	height: 16px;
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	margin-top: 1px;
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=activate"] {
-	padding-right: 16px;
-	position: absolute;
-	top: 0; right: 49px;
-	background-image: url(../i/action1.png);
-	background-position: center;
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=activate"]:hover {
-	background-image: url(../i/action2.png);
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=watch"] img {
-	padding-right: 16px;
-	position: absolute;
-	top: 0; right: 33px;
-	background-image: url(../i/action3.png);
-	background-position: center;
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=watch"]:hover img {
-	background-image: url(../i/action4.png);
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=transfer1"] img,
-#filterrow ~ .listitemrow a[href^="item.php?action=manytransfer1"] img {
-	padding-right: 16px;
-	position: absolute;
-	top: 0; right: 17px;
-	background-image: url(../i/action5.png);
-	background-position: center;
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=transfer1"]:hover img,
-#filterrow ~ .listitemrow a[href^="item.php?action=manytransfer1"]:hover img {
-	background-image: url(../i/action6.png);
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=manydrop"] img {
-	padding-right: 16px;
-	position: absolute;
-	top: 0; right: 1px;
-	background-image: url(../i/action7.png);
-	background-position: center;
-}
-
-#filterrow ~ .listitemrow a[href^="item.php?action=manydrop"]:hover img {
-	background-image: url(../i/action8.png);
-}
-
-/* PE-Anzeige */
-
-#phasespacer {
-	display: inline-block;
-	height: 0;
-}
-
-#phasespacer br {
-	display: none;
-}
-
-#phasespacer + center {
-	background: rgba(255,255,255,.5);
-	border-radius: 0 0 4px 4px;
-	border: 1px solid #ccc;
-	border-top: 0;
-	margin-bottom: 4px;
-}
-
-#phasespacer + center + div {
-	margin: 0 !important;
-}
-
-#phasedisp {
-	width: 100% !important;
-}
-
-#fullenergydisp {
-	background-image: url(../i/button2.png) !important;
-	background-color: #ccc !important;
-	border: 0px solid #999 !important;
-	border-radius: 0 0 4px 4px;
-	width: 100% !important;
-	overflow: hidden;
-}
-
-#curenergy {
-	background-image: url(../i/yellow.png) !important;
-	background-color: transparent !important;
-	border: 0px solid #eee !important;
-	border-radius: 0 0 0 3px;
-	overflow: hidden;
-	height: 11px !important; /* to prevent overlay */
-}
-
-#phasetext {
-	color: #333;
-	text-shadow: 0 0 3px #fff;
-}
-
 /* JS-Tooltips */
 
-#ttContainer table { 
+#ttContainer table {
 	border-collapse: separate !important;
 	border: 0px solid transparent !important;
 }
 
-#ttCaption { 
+#ttCaption {
 	background-color: #fff !important;
 	border: 1px solid #777 !important;
 	border-radius: 4px 4px 0 0 !important;
 	border-bottom: 1px solid #777 !important;
 	color: #333 !important;
 	text-align: center;
-	background-image: url(../i/br2.png) !important;
+	background-image: url(i/br2.png) !important;
 }
 
 #ttContent {
-	background: #f1f5fb url(../i/noise.png) left top repeat-x !important;
+	background: #f1f5fb url(i/noise.png) left top repeat-x !important;
 	border: 1px solid #777 !important;
 	border-top: 0 !important;
 	border-radius: 0 0 4px 4px !important;
@@ -584,19 +110,19 @@ span.medium {
 
 /* FL-Tooltip */
 
-#ttCaption img[src$="close.gif"] { 
-	display: inline-block; 
-	width: 0px; 
-	height: 10px; 
-	background: url(../i/rcsmall.png); 
-	background-repeat: no-repeat; 
+#ttCaption img[src$="close.gif"] {
+	display: inline-block;
+	width: 0px;
+	height: 10px;
+	background: url(i/rcsmall.png);
+	background-repeat: no-repeat;
 	margin-top: 3px;
-	padding-right: 10px; 
-	overflow: hidden; 
+	padding-right: 10px;
+	overflow: hidden;
 }
 
-#ttContent textarea, 
-input[name="name"][type="text"][id="name"][value=""][size="20"][maxlength="30"] /* Feuervogel */, 
+#ttContent textarea,
+input[name="name"][type="text"][id="name"][value=""][size="20"][maxlength="30"] /* Feuervogel */,
 textarea[name="brief"][cols="20"][rows="10"][wrap="VIRTUAL"][id="brief"] /* Feuervogel */,
 form[action="friends.php?action=insertuser"] input[name="username"] /* FL: Freund hinzufügen, Breite ist unten definiert */,
 .framemainbg textarea /* Briefe */,
@@ -604,7 +130,7 @@ form[action="friends.php?action=insertuser"] input[name="username"] /* FL: Freun
 .frameitembg textarea[name="tele_msg"] /* Clantelep. */ {
 	width: 100%;
 	border: 1px solid #ccc;
-	background: url(../i/white.png);
+	background: url(i/white.png);
 	border-radius: 7px;
 	padding: 3px;
 	font-family: sans-serif;
@@ -617,185 +143,65 @@ form[action="friends.php?action=insertuser"] input[name="username"] /* FL: Freun
 
 /* Inventar - Status */
 
-#listrow_status span[title$="(15 Minuten)"]:after { content: " (15m)"; }
-#listrow_status span[title$="(14 Minuten)"]:after { content: " (14m)"; }
-#listrow_status span[title$="(13 Minuten)"]:after { content: " (13m)"; }
-#listrow_status span[title$="(12 Minuten)"]:after { content: " (12m)"; }
-#listrow_status span[title$="(11 Minuten)"]:after { content: " (11m)"; }
-#listrow_status span[title$="(10 Minuten)"]:after { content: " (10m)"; }
-#listrow_status span[title$="(9 Minuten)"]:after { content: " (9m)"; }
-#listrow_status span[title$="(8 Minuten)"]:after { content: " (8m)"; }
-#listrow_status span[title$="(7 Minuten)"]:after { content: " (7m)"; }
-#listrow_status span[title$="(6 Minuten)"]:after { content: " (6m)"; }
-#listrow_status span[title$="(5 Minuten)"]:after { content: " (5m)"; }
-#listrow_status span[title$="(4 Minuten)"]:after { content: " (4m)"; }
-#listrow_status span[title$="(3 Minuten)"]:after { content: " (3m)"; }
-#listrow_status span[title$="(2 Minuten)"]:after { content: " (2m)"; }
-#listrow_status span[title$="(1 Minuten)"]:after { content: " (1m)"; }
-#listrow_status span[title$="(wenigen Sekunden)"]:after { content: " (<1m)"; }
-
-#listrow_status span[title$="(4 Minuten)"],
-#listrow_status span[title$="(3 Minuten)"],
-#listrow_status span[title$="(2 Minuten)"],
-#listrow_status span[title$="(1 Minuten)"],
-#listrow_status span[title$="(wenigen Sekunden)"] {
-	text-decoration: blink;
-}
-
-/* Mainframe */
-
-.framemainbg {
-	padding: 6px;
-	margin-top: 15px;
-}
-
 .framemainbg, .framemainbg td {
 	color: #222;
 }
 
-.framemainbg a, .framechattextbg a {
-	color: #d30;
-	font-weight: bold;
-}
-
-.framemainbg a:hover, .framechattextbg a:hover {
-	color: #f50;
-}
-
 /* Feldbeschreibungen */
 
-table.areadescription {
-	border-collapse: separate;
-	border-radius: 3px;
-	background-color: #ddd;
-	border: 1px solid #ccc;
-	width: 100%;
-}
+/* FLÜSTERN */
+.listusersrow img[src$="blase.gif"], .friendlist img[src$="blase.gif"] { display: none; }
+a[href^="main.php?action=whisperuser&act_user_id="]:after { content: "\f075"; }
+.framemainbg a[href^="chatform.php?action=whisperuser&act_user_id="]:after { content: "\f075"; }
+/* /FLÜSTERN */
 
-table.areadescription .imageborder {
-	padding: 3px;
-	border: 1px solid #999;
-	background-color: #f9f9f9;
-	width: 50px;
-	height: 50px;
-	border-radius: 3px 0 5px 0;
-	position: absolute;
-	left: 6px;
-	top: 21px;
-	box-shadow: 4px 4px 4px -4px #888;
-}
+/* GROUP */
+.listusersrow img[src$="group.gif"], .friendlist img[src$="group.gif"] { display: none; }
+a[href^="fight.php?action=groupinvite&act_user_id="]:after { content: "\f0c0"; }
 
-table.areadescription .mainheader {
-	padding-left: 70px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	font-size: 25px;
-	background-color: #fff;
-	border-bottom: 1px solid #999;
-	text-shadow: 1px 1px 5px #888;
-	border-radius: 3px 3px 0 0;
-}
+#listrow_group img[src$="group.gif"] { display: none; }
+a[href^="fight.php?action=groupjoinrand"]:before { content: "\f0c0"; }
+/* /GROUP */
 
-table.areadescription .areadescription {
-	text-indent: 60px;
-	padding: 3px 5px 5px 5px;
-	background: #f1f5fb url(../i/noise.png) left top repeat-x;
-}
+a[href^="chatform.php?action=whisperuser&act_user_id="]:after,
+a[href^="chatform.php?action=whisperuser&act_user_id="]:hover:after,
+a[href^="main.php?action=whisperuser&act_user_id="]:after,
+a[href^="main.php?action=whisperuser&act_user_id="]:hover:after,
+a[href^="fight.php?action=groupinvite&act_user_id="]:after,
+a[href^="fight.php?action=groupinvite&act_user_id="]:hover:after,
+a[href^="fight.php?action=groupjoinrand"]:before,
+a[href^="fight.php?action=groupjoinrand"]:hover:before { color: #666;
+    font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: .9; }
 
-table.areadescription .areadescription * {
-	text-indent: 0px;
-}
-
-/* Personen & NPCs & Items */
-
-.personlistcaption {
-	border: #1px solid #000;
-	background: #333 url(../i/user.png) 3px center no-repeat;
-	padding: 4px 5px 4px 23px;
-	border-radius: 5px;
-	color: #eee;
-	font-size: 11px;
-	font-weight: bold;
-}
-
-.listusersrow {
-	padding: 2px 6px;
-	border: 1px solid #ccc;
-	border-bottom: 0 solid transparent;
-	font-size: 11px;
-	margin: 0;
-	height: auto;
-	min-height: auto;
-	background: url(../i/white.png);
-}
-
-.personlistcaption + .listusersrow {
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	margin-top: 2px;
-}
-
-.listusersrow:last-of-type {
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border-bottom: 1px solid #ccc;
-}
-
-.listusersrow img[src$="blase.gif"], .friendlist img[src$="blase.gif"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 10px; 
-	background: url(../i/comment.png); 
-	background-repeat: no-repeat; 
-	margin-top: 1px;
-	padding-left: 10px; 
-	overflow: hidden; 
-}
-
-.listusersrow img[src$="group.gif"], .friendlist img[src$="group.gif"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 10px; 
-	background: url(../i/group_add.png); 
-	background-repeat: no-repeat; 
-	margin-top: 1px;
-	padding-left: 10px; 
-	overflow: hidden; 
-}
-
-/* Einschub: Itemframe: Group */
-
-.frameitembg img[src$="group.gif"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 10px; 
-	background: url(../i/group_go.png); 
-	background-repeat: no-repeat; 
-	margin-top: 1px;
-	padding-left: 10px; 
-	overflow: hidden; 
-}
+a[href^="chatform.php?action=whisperuser&act_user_id="],
+a[href^="chatform.php?action=whisperuser&act_user_id="]:hover,
+a[href^="main.php?action=whisperuser&act_user_id="],
+a[href^="main.php?action=whisperuser&act_user_id="]:hover,
+a[href^="fight.php?action=groupinvite&act_user_id="],
+a[href^="fight.php?action=groupinvite&act_user_id="]:hover,
+a[href^="fight.php?action=groupjoinrand"],
+a[href^="fight.php?action=groupjoinrand"]:hover { text-decoration: none; }
 
 .friendlist img[src$="close.gif"] {
 	display: inline-block;
-	width: 0px; 
-	height: 10px; 
-	background: url(../i/rcsmall.png); 
-	background-repeat: no-repeat; 
+	width: 0px;
+	height: 10px;
+	background: url(i/rcsmall.png);
+	background-repeat: no-repeat;
 	margin-top: 1px;
-	padding-left: 10px; 
-	overflow: hidden; 
+	padding-left: 10px;
+	overflow: hidden;
 }
 
 .friendlist a[href="#"][onclick*="tt(event,"]:after {
 	content: attr(title);
 	position: absolute;
-	left: 316px;
+	left: 326px;
 	right: 5px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-bottom: 0;
-	background: url(../i/white.png);
+	background: url(i/white.png);
 	padding: 1px;
 	color: #333;
 	font-weight: normal;
@@ -823,46 +229,11 @@ table.areadescription .areadescription * {
 }
 
 .friendlist + br + p + .friendlist a[href="#"][onclick*="tt(event,"]:after {
-	left: 273px;
-}
-
-.itemlistcaption {
-	border: #1px solid #000;
-	background: #333 url(../i/box.png) 3px center no-repeat;
-	padding: 4px 5px 4px 23px;
-	border-radius: 5px;
-	font-size: 11px;
-	font-weight: bold;
-	color: #eee;
-}
-
-#plantrow {
-	border: #1px solid #000;
-	background: #333 url(../i/plant.png) 3px center no-repeat;
-	padding: 4px 5px 4px 23px;
-	border-radius: 5px;
-	font-size: 11px;
-	font-weight: bold;
-	color: #eee;
-}
-
-.listplaceitemsrow {
-	padding: 3px;
-	border: 1px solid #999;
-	border-radius: 4px;
-	font-size: 11px;
-	margin: 2px 0 0 0;
-	height: auto;
-	min-height: 45px;
-}
-
-.listplaceitemsrow img {
-	width: 30px;
-	height: 30px;
+	left: 278px;
 }
 
 /* Doppelte brs bei Itembeschreibungen verhindern, z.B Hasenfell */
-.listplaceitemsrow br + br {
+.listplaceitemsrow br + br + br {
 	display: none;
 }
 
@@ -877,7 +248,7 @@ table.areadescription .areadescription * {
 	border-bottom: 1px solid #ccc;
 	padding: 1px;
 	margin-top: 3px;
-	background: url(../i/white.png);
+	background: url(i/white.png);
 }
 
 .friendlist tr td[width="200px"] {
@@ -950,13 +321,13 @@ img[src$="sieg.jpg"], img[src$="niederlage.jpg"] {
 /* Archiv */
 
 img[src$="brief.jpg"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 14px; 
-	background: url(../i/brief.png); 
-	background-repeat: no-repeat; 
+	display: inline-block;
+	width: 0px;
+	height: 14px;
+	background: url(i/brief.png);
+	background-repeat: no-repeat;
 	background-position: left bottom;
-	padding-left: 16px; 
+	padding-left: 16px;
 	overflow: hidden;
 	margin-right: 5px;
 }
@@ -983,7 +354,7 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	font-size: 13px;
 }
 
-/* Errungenschaften */ 
+/* Errungenschaften */
 
 .itemlistcaption[style="width: 550px"], .listcaption[style="width: 550px"] {
 	border-radius: 5px 5px 0 0 !important;
@@ -996,7 +367,7 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	font-weight: bold;
 }
 
-.itemlistcaption[style="width: 550px"] + .listrow, 
+.itemlistcaption[style="width: 550px"] + .listrow,
 .listcaption[style="width: 550px"] + .listrow {
 	border-radius: 0 0 5px 5px !important;
 	background-color: #555 !important;
@@ -1004,52 +375,37 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	padding: 2px 5px !important;
 }
 
-.itemlistcaption[style="width: 550px"] + .listrow img, 
+.itemlistcaption[style="width: 550px"] + .listrow img,
 .listcaption[style="width: 550px"] + .listrow img {
 	opacity: .8;
 }
 
-.itemlistcaption[style="width: 550px"] + .listrow td, 
+.itemlistcaption[style="width: 550px"] + .listrow td,
 .listcaption[style="width: 550px"] + .listrow td {
 	color: #111 !important;
 	font-size: 11px;
 }
 
 .listcaption[style="width: 550px"]  img[src$="icon_view.gif"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 16px; 
-	background: url(../i/eye.png); 
-	background-repeat: no-repeat; 
+	display: inline-block;
+	width: 0px;
+	height: 16px;
+	background: url(i/eye.png);
+	background-repeat: no-repeat;
 	margin-top: 1px;
-	padding-left: 16px; 
-	overflow: hidden; 
+	padding-left: 16px;
+	overflow: hidden;
 }
 
 .listcaption[style="width: 550px"]  img[src$="icon_view2.gif"] {
-	display: inline-block; 
-	width: 0px; 
-	height: 16px; 
-	background: url(../i/eye2.png); 
-	background-repeat: no-repeat; 
+	display: inline-block;
+	width: 0px;
+	height: 16px;
+	background: url(i/eye2.png);
+	background-repeat: no-repeat;
 	margin-top: 1px;
-	padding-left: 16px; 
-	overflow: hidden; 
-}
-
-
-/* Charakterfähigkeiten */
-
-.abilitymenu {
-	border-spacing: 0px;
-	border-collapse: collapse;
-	margin-top: -1px;
-}
-
-.abilitymenu td {
-	border: 1px solid #eee;
-	background: url(../i/white.png);
-	color: #333;
+	padding-left: 16px;
+	overflow: hidden;
 }
 
 /* Unterkünfte */
@@ -1057,30 +413,28 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 /* > Schwarze Felder "sichtbar" machen */
 td[style*="/map/black.jpg"] a:not(.nocango),
 td[style*="/map/u/Einzelbilder/002.jpg"] a,
-td[style*="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; background-image:url(../i/uk.png) !important; }
+td[style*="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; background-image:url(i/uk.png) !important; }
 
 /* > Bau-Menü */
 .builtcaption,
 .editcaption,
 .visitcaption {
 	position: absolute;
-	right: 15px;
-	top: 30px;
+	right: 10px;
+	top: 5px;
 	color: transparent;
-	font-size: 1px;
+	font-size: 0;
 }
 
 .builtcaption a,
 .editcaption a,
-.visitcaption a { 
-	box-shadow: 0px 1px 0px 0px #ffffff inset; 
+.visitcaption a {
+	box-shadow: 0px 1px 0px 0px #ffffff inset;
 	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6) );
 	background: -moz-linear-gradient( center top, #ffffff 5%, #f6f6f6 100% );
-	border-radius: 4px;
-	border: 1px solid #dcdcdc;
 	display: inline-block;
 	color: #666;
-	padding: 2px 3px;
+	padding: 3px 5px;
 	text-decoration: none;
 	text-shadow: 1px 1px 0px #eee;
 	font-size: 10px;
@@ -1099,7 +453,7 @@ td[style*="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; backg
 .uplantimg { width: 30px; height: 30px; }
 
 /* > gepresste Zauberkugel */
-/* > > Bank aller Wesen */ 
+/* > > Bank aller Wesen */
 .frameitembg select[name="z_pos_id"] option[value="73"] {
 	font-weight: bold;
 }
@@ -1111,109 +465,10 @@ td[style*="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; backg
 	display: none;
 }
 
-#listrow_group {
-	position: absolute;
-	right: 7px;
-	margin-top: -17px;
-	background: none;
-	border: 0;
-}
-
-#listrow_group a {
-	overflow: hidden;
-	width: 20px;
-	display: inline-block;
-	height: 11px;
-	background: url(../i/personen_grp.png) right bottom no-repeat;
-}
-
-#listrow_group a:hover {
-	background: url(../i/personen_grph.png) right bottom no-repeat;
-}
-
 table.areadescription + br,
 table.areadescription + br + table + br,
 table.areadescription + br + table + br + table + br {
 	display: none;
-}
-
-#listrow_lifep {
-	position: absolute;
-	right: 9px;
-	background: #fff;
-	z-index: 10000;
-	font-size: 15px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 6px 5px;
-	margin-top: 3px;
-	height: 15px;
-	line-height: 15px;
-	vertical-align: middle;
-	transform: translateY(2px);
-}
-
-#listrow_lifep > b {
-	display: none;
-}
-
-#listrow_lifep > span > b {
-	font-weight: 600;
-}
-
-#listrow_money img[src$="icon_gold.gif"] {
-	width: 12px;
-	height: 12px;
-	margin-right: -9px;
-}
-
-#listrow_int > b:first-of-type, #listrow_money > b:first-of-type {
-	font-size: 0; width: 0; display: inline-block;
-}
-
-#listrow_int > b:first-of-type {
-	width: 17px;
-}
-
-#listrow_int > b:first-of-type:after, #listrow_money > b:first-of-type:after {
-	font-size: 11px; width: 17px; display: inline-block;
-}
-
-#listrow_int > b:first-of-type:after {
-	content: "Int: ";
-}
-
-#listrow_money > b:first-of-type:after {
-	content: "";
-}
-
-/* > UniqueItem - anfordern */
-/* a[href="premium.php"] + br + br + style + table */
-
-a[href="premium.php"] + br + br + style + table {
-	border: 0 !important;
-}
-
-a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] {
-	border: 1px solid #ccc !important;
-	background: #fff;
-}
-
-a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] ~ tr {
-	border: 1px solid #ccc !important;
-	border-top: 0 !important;
-}
-
-a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] ~ tr.bg1 {
-	background-color: #f9f9f9 !important;
-}
-
-a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] ~ tr.bg2 {
-	background-color: #eee !important;
-}
-
-a[href="premium.php"] + br + br + style + table tr img[src^="../images/items"] {
-	width: 16px; height: 16px;
 }
 
 /* WERKSTATT */
@@ -1221,9 +476,9 @@ div.uwork br:first-of-type + br { display: none; }
 div.uwork + br[style="clear: both;"] + br { display: none; }
 /* /WERKSTATT */
 
-.tutorial {	border: 1px solid #ccc !important; background-color: #eee !important; 
+.tutorial {	border: 1px solid #ccc !important; background-color: #eee !important;
 	-moz-border-radius: 8px !important; -webkit-border-radius: 8px !important; border-radius: 8px !important; color: #333; }
-.tutorial legend { border: 1px solid #ccc !important; background-color: #eee !important; -moz-border-radius: 3px !important; 
+.tutorial legend { border: 1px solid #ccc !important; background-color: #eee !important; -moz-border-radius: 3px !important;
 	-webkit-border-radius: 3px !important; border-radius: 3px !important; color: #333; padding: 2px; }
 
 .framemapbg td a { display: inline-block; position: relative; width: 50px; height: 50px; }
@@ -1252,15 +507,15 @@ div.uwork + br[style="clear: both;"] + br { display: none; }
 }
 
 /* > Infos < */
-.framemainbg:before {
+/* .framemainbg:before {
 	position: absolute; right: 20px; top: 2px; font-size: 11px;
 }
 
 .framebannerbg {
-	background: #fff url(../i/noise_gray.png) fixed;
+	background: #fff url(i/noise_gray.png) fixed;
 }
 
-.framebannerbg:before, .framebannerbg:after { 
+.framebannerbg:before, .framebannerbg:after {
 	position: absolute; white-space: pre;
 	box-shadow: 0 0 4px rgba(0,0,0,.5); border-radius: 1px;
 	left: 15px; top: 0px; width: 270px; height: 40px;
@@ -1268,49 +523,4 @@ div.uwork + br[style="clear: both;"] + br { display: none; }
 	transition: all 500ms; padding: 10px;
 	border: 3px solid #eee; text-overflow: ellipsis;
 	overflow: hidden;
-}
-
-.framebannerbg:hover:before {
-	opacity: 0;
-}
-
-.framebannerbg:after {
-	opacity: 0; transform: translate(0px, -60px);
-}
-
-.framebannerbg:hover:after {
-	opacity: 1; transform: translate(0px, 0px);
-	
-	
-}
-
-/* Werbung */
-.framebannerbg table td:first-of-type {
-	display: none;
-}
-
-.framebannerbg table td:last-of-type {
-	position: absolute;
-	right: 15px; top: 0px;
-	box-shadow: 0 0 4px rgba(0,0,0,.5);
-}
-
-#ItemFrameClanmenu .listrow[title]:after {
-	content: attr(title);
-	display: block;
-}
-
-#ItemFrameItem img[src*="/images/sponsor"][title^="(noch 1 T"],
-#ItemFrameItem img[src*="/images/sponsor"][title^="(noch 2 T"],
-#ItemFrameItem img[src*="/images/sponsor"][title^="(noch 3 T"] {
-	animation: blink 1s steps(5, start) infinite;
-}
-
-@keyframes blink {
-    to {
-        visibility: hidden;
-		box-shadow: 0 0 7px red;
-		transform: translateX(-7px);
-		background: black;
-    }
-}
+} */

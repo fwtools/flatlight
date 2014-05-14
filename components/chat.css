@@ -1,0 +1,81 @@
+/* > Chatframe (Form) */
+.framechatformbg { border: 0 !important; }
+.framechatformbg table { border: 0 !important; padding: 0; margin: 0; border-collapse: collapse; }
+.framechatformbg td { color: #111; }
+
+#chatform { padding: 0; margin: 0; }
+#chatform input[type="text"] { border: 1px solid #ccc; border-top: 0; border-bottom: 0;
+    padding: 2px 7px; height: 35px; margin-top: -1px; background: white; }
+#chatform input[type="submit"] { margin-top: -1px; }
+.framechatformbg td:nth-of-type(1) { padding-left: 6px !important; padding-right: 6px !important; }
+.framechatformbg td:nth-of-type(2) { padding-right: 4px; }
+
+/* > Chatframe (Text) */
+.framechattextbg:before { background-image: url(../i/noiset.png); background-repeat: repeat-x; background-attachment: fixed;
+    background-position: left bottom; position: fixed; left: 0; right: 0; bottom: 0; height: 5px; z-index: 1000; content: ""; }
+.framechattextbg:after { background-image: url(../i/noise.png); background-repeat: repeat-x; background-attachment: fixed;
+    background-position: left top; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 1000; content: ""; }
+.framechattextbg p { font-size: 12px; }
+.framechattextbg > *:last-of-type { padding-bottom: 6px; }
+
+/* > Chatcolors */
+.chattext { color: #222; }
+.chattext i { color: #444; }
+.chattextscream,
+.submitschreien { color: #05c; }
+.chattextclan,
+.submitclan { color: #c00; }
+.chattextgroup,
+.submitgroup { color: #aa5600; }
+.chattextinfo { color: #c90; font-style: italic; }
+.chattextwhisper,
+.submitwhisper { color: #380; }
+.chattextglobal,
+.submitglobalchat { color: #8f1a8f; }
+
+.chattextglobal b:first-of-type { display: inline-block; }
+.chattextglobal b:first-of-type:before { padding-right: 2px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0c2"; }
+
+.chattextscream b:first-of-type { display: inline-block; }
+.chattextscream b:first-of-type:before { padding-left: 1px; padding-right: 7px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0ac"; }
+
+.worldsay,
+.worldsay table,
+.worldsay tbody,
+.worldsay table td { font-size: 10px; }
+.worldsay table,
+.worldsay tbody { border-collapse: separate; }
+.worldsay { margin: 0 -2px; }
+
+/* grüne Worldsays */
+.worldsay tr[bgcolor="#99EE99"]  { background-color: transparent !important; color: #d99 !important; }
+.worldsay tr[bgcolor="#99EE99"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important; border: 1px solid rgba(0,0,0,.2) !important; }
+
+/* blaue Worldsays */
+.worldsay tr[bgcolor="#C1CEF9"]  { background-color: transparent !important; color: #d99 !important; }
+.worldsay tr[bgcolor="#C1CEF9"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important; border: 1px solid rgba(0,0,0,.2) !important; }
+
+/* rote Worldsays */
+.worldsay tr[bgcolor="#FFAEA1"]  { background-color: transparent !important; color: #d99 !important; }
+.worldsay tr[bgcolor="#FFAEA1"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important; border: 1px solid rgba(0,0,0,.2) !important; }
+
+/* Hochhalten */
+table[style="border: 1px solid #C85424;"] { margin: 0 -2px; border: 0 solid rgba(0,0,0,0) !important; }
+table[style="border: 1px solid #C85424;"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important; border: 1px solid rgba(0,0,0,.2) !important; }
+table[style="border: 1px solid #C85424;"] img { width: 24px; height: 24px; margin: 4px 8px 4px 0; }
+/* > Bilder im Chat */
+img[src="http://voting.gdynamite.de/images/gd_animbutton.gif"] { display: none; }
+
+/* > Trenngrafik & Chaticons ausblenden */
+img[src*="item_divider.gif"], .chatpics { display: none; }
+
+
+
+.framemainbg a, .framechattextbg a {
+    color: #d30;
+    font-weight: bold;
+}
+
+.framemainbg a:hover, .framechattextbg a:hover {
+    color: #f50;
+}

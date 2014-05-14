@@ -1,0 +1,26 @@
+.framemapbg table { border: 1px solid rgba(0,0,0,.2); padding: 3px; width: 258px; margin-top: 19px; background: #ccc; }
+
+.framemapbg img[src*="zahl"] { opacity: .75; }
+
+.framemapbg table a { display: block; width: 50px; height: 50px; border: 0; }
+
+.nocango { opacity: .9; }
+.nocango:hover { background: transparent url(../i/nocango.png) left top no-repeat; cursor: default !important; }
+.stdjpg { opacity: .9; background-image: url(../i/berg.png) !important; }
+
+a[href="map.php?reload=1"] { position: absolute; left: 16px; font-size: 11px; }
+a[href="map.php?reload=1"]:before { content: "\f021 "; font-family: FontAwesome; font-style: normal; font-weight: normal; color: #eee; }
+a[href="map.php?reload=1"]:after { content: " Aktualisieren"; }
+a[href="map.php?reload=1"]:hover { text-decoration: none; }
+a[href="map.php?reload=1"] img { display: none; }
+
+.positiontext { position: absolute; right: 0; left: 0; top: 0; line-height: 18px;
+    text-align: right; font-size: 11px; color: #eee; padding: 0px 12px 0px 3px; height: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.2); background: #2980b9; font-weight: bold;
+    text-shadow: 0 2px 1px rgba(0,0,0,.2); }
+.positiontext a { color: #eee; text-decoration: none; }
+.positiontext a:hover { color: #eee; }
+
+#test { text-align: center; font-size: 9px; color: #000; width: 242px; padding: 0 3px; min-height: 14px; margin: 0 auto; }
+
+.framemapbg td { display: inline-block; position: relative; width: 50px; height: 50px; }

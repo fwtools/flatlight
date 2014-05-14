@@ -1,0 +1,24 @@
+#listrow_status span[title$="(15 Minuten)"]:after { content: " (15m)"; }
+#listrow_status span[title$="(14 Minuten)"]:after { content: " (14m)"; }
+#listrow_status span[title$="(13 Minuten)"]:after { content: " (13m)"; }
+#listrow_status span[title$="(12 Minuten)"]:after { content: " (12m)"; }
+#listrow_status span[title$="(11 Minuten)"]:after { content: " (11m)"; }
+#listrow_status span[title$="(10 Minuten)"]:after { content: " (10m)"; }
+#listrow_status span[title$="(9 Minuten)"]:after { content: " (9m)"; }
+#listrow_status span[title$="(8 Minuten)"]:after { content: " (8m)"; }
+#listrow_status span[title$="(7 Minuten)"]:after { content: " (7m)"; }
+#listrow_status span[title$="(6 Minuten)"]:after { content: " (6m)"; }
+#listrow_status span[title$="(5 Minuten)"]:after { content: " (5m)"; }
+#listrow_status span[title$="(4 Minuten)"]:after { content: " (4m)"; }
+#listrow_status span[title$="(3 Minuten)"]:after { content: " (3m)"; }
+#listrow_status span[title$="(2 Minuten)"]:after { content: " (2m)"; }
+#listrow_status span[title$="(1 Minuten)"]:after { content: " (1m)"; }
+#listrow_status span[title$="(wenigen Sekunden)"]:after { content: " (<1m)"; }
+
+#listrow_status span[title$="(4 Minuten)"],
+#listrow_status span[title$="(3 Minuten)"],
+#listrow_status span[title$="(2 Minuten)"],
+#listrow_status span[title$="(1 Minuten)"],
+#listrow_status span[title$="(wenigen Sekunden)"] {
+    text-decoration: blink;
+}

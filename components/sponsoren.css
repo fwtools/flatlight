@@ -1,0 +1,46 @@
+/* SPONSORABLAUF */
+#ItemFrameItem img[src*="/images/sponsor"][title^="(noch 1 T"],
+#ItemFrameItem img[src*="/images/sponsor"][title^="(noch 2 T"],
+#ItemFrameItem img[src*="/images/sponsor"][title^="(noch 3 T"] {
+    animation: blink 1s steps(5, start) infinite; }
+
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/* SPONSORABLAUF */
+
+/* WERBUNG */
+.framebannerbg table td:first-of-type { display: none; }
+.framebannerbg table td:last-of-type { position: absolute; left: 4px; top: 4px; }
+/* /WERBUNG */
+
+/* > UniqueItem - anfordern */
+/* a[href="premium.php"] + br + br + style + table */
+
+a[href="premium.php"] + br + br + style + table {
+    border: 0 !important;
+}
+
+a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] {
+    border: 1px solid #ccc !important;
+    background: #fafafa;
+}
+
+a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] ~ tr {
+    border: 1px solid #ccc !important;
+    border-top: 0 !important;
+}
+
+a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] ~ tr.bg1 {
+    background-color: #fafafa !important;
+}
+
+a[href="premium.php"] + br + br + style + table tr.bg1[style="font-weight:bold; border: 2px solid #C85424;"] ~ tr.bg2 {
+    background-color: #eee !important;
+}
+
+a[href="premium.php"] + br + br + style + table tr img[src] {
+    width: 16px; height: 16px;
+}
