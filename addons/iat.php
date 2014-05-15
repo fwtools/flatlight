@@ -1,3 +1,0 @@
-<?php
-
-# Item Activity Tracking

@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0);
+error_reporting(-1);
 header("Content-type: text/css; charset=utf-8");
 
 /* CACHE */
@@ -14,7 +14,7 @@ header("Cache-Control: private, max-age=" . ($time * 60));
 header("Cache-Control: pre-check=" . ($time * 60), FALSE);
 /* // CACHE */
 
-$addons_available = ['msf'];
+$addons_available = ['agg', 'at', 'msf'];
 $addons_enabled = [];
 
 foreach($_GET as $k => $v) {
@@ -32,11 +32,18 @@ if(file_exists(__DIR__ . "/static/{$name}.css")) {
 }
 
 require_once __DIR__ . "/lib/cssmin-v3.0.1-minified.php";
+require_once __DIR__."/../../../config.php";
+
+$db = "mysql:host={$config['db']['hostname']};";
+$db .= "dbname={$config['db']['database']};charset=utf8";
+$db = new PDO($db, $config['db']['username'], $config['db']['password']);
+
 $css = file_get_contents(__DIR__ . "/style.css");
 
 foreach($addons_enabled as $addon) {
-	if(file_exists(__DIR__ . "/addons/{$addon}.css")) {
-		$css.= file_get_contents(__DIR__ . "/addons/{$addon}.css");
+	if(file_exists(__DIR__ . "/addons/{$addon}.php")) {
+		require __DIR__ . "/addons/{$addon}.php";
+		$css.= $addon();
 	}
 }
 

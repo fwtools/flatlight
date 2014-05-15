@@ -19,7 +19,7 @@ a[href="map.php?reload=1"] img { display: none; }
     border-bottom: 1px solid rgba(0,0,0,.2); background: #2980b9; font-weight: bold;
     text-shadow: 0 2px 1px rgba(0,0,0,.2); }
 .positiontext a { color: #eee; text-decoration: none; }
-.positiontext a:hover { color: #eee; }
+.positiontext a:hover { color: #eee; text-decoration: none; }
 
 #test { text-align: center; font-size: 9px; color: #000; width: 242px; padding: 3px; min-height: 14px; margin: 0 auto; color: #333; }
 
