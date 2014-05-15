@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(-1);
+error_reporting(0);
 header("Content-type: text/css; charset=utf-8");
 
 /* CACHE */
@@ -37,10 +37,10 @@ if(file_exists(__DIR__ . "/static/{$name}.css")) {
 }
 
 require_once __DIR__ . "/lib/cssmin-v3.0.1-minified.php";
-require_once __DIR__."/../../../config.php";
+require_once __DIR__ . "/../../../config.php";
 
 $db = "mysql:host={$config['db']['hostname']};";
-$db .= "dbname={$config['db']['database']};charset=utf8";
+$db.= "dbname={$config['db']['database']};charset=utf8";
 $db = new PDO($db, $config['db']['username'], $config['db']['password']);
 
 $css = file_get_contents(__DIR__ . "/style.css");
