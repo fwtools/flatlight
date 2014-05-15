@@ -4,3 +4,7 @@
 
 # temp files
 *~
+
+# generated files
+/static
+/track/static
