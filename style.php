@@ -14,6 +14,11 @@ header("Cache-Control: private, max-age=" . ($time * 60));
 header("Cache-Control: pre-check=" . ($time * 60), FALSE);
 /* // CACHE */
 
+if(isset($_GET['mat']) && is_string($_GET['mat'])) {
+	$track_id = md5($_GET['mat']);
+	print "@import 'track/track.php?{$track_id}';";
+}
+
 $addons_available = ['agg', 'at', 'msf'];
 $addons_enabled = [];
 
@@ -39,6 +44,14 @@ $db .= "dbname={$config['db']['database']};charset=utf8";
 $db = new PDO($db, $config['db']['username'], $config['db']['password']);
 
 $css = file_get_contents(__DIR__ . "/style.css");
+
+foreach(scandir(__DIR__ . "/components") as $file) {
+	if($file === '.' || $file === '..') {
+		continue;
+	}
+
+	$css.= file_get_contents(__DIR__ . "/components/{$file}");
+}
 
 foreach($addons_enabled as $addon) {
 	if(file_exists(__DIR__ . "/addons/{$addon}.php")) {

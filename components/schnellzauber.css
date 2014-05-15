@@ -32,5 +32,5 @@ table[id^="fastspell"]:not(#fastspell) a:hover { color: #111; }
 
 table[id^="fastspell"]:not(#fastspell) img[src$="close.gif"],
 #close1 img[src$="close.gif"], #close2 img[src$="close.gif"] {
-    display: inline-block; width: 0px; height: 10px; background: url(../i/rcsmall.png);
+    display: inline-block; width: 0px; height: 10px; background: url(i/rcsmall.png);
     background-repeat: no-repeat; margin-top: 1px; padding-left: 10px; overflow: hidden; }

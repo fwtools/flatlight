@@ -11,9 +11,9 @@
 .framechatformbg td:nth-of-type(2) { padding-right: 4px; }
 
 /* > Chatframe (Text) */
-.framechattextbg:before { background-image: url(../i/noiset.png); background-repeat: repeat-x; background-attachment: fixed;
+.framechattextbg:before { background-image: url(i/noiset.png); background-repeat: repeat-x; background-attachment: fixed;
     background-position: left bottom; position: fixed; left: 0; right: 0; bottom: 0; height: 5px; z-index: 1000; content: ""; }
-.framechattextbg:after { background-image: url(../i/noise.png); background-repeat: repeat-x; background-attachment: fixed;
+.framechattextbg:after { background-image: url(i/noise.png); background-repeat: repeat-x; background-attachment: fixed;
     background-position: left top; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 1000; content: ""; }
 .framechattextbg p { font-size: 12px; }
 .framechattextbg > *:last-of-type { padding-bottom: 6px; }
