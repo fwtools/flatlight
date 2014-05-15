@@ -7,7 +7,7 @@
 a.fast_spell_set, span.fast_spell_set { margin-left: 3px; margin-right: 3px;
     display: inline-block; text-decoration: none; border-radius: 50%;
     width: 16px; height: 16px; background: #3498db; text-align: center;
-    font-size: 12px; line-height: 16px; }
+    font-size: 11px; line-height: 16px; }
 
 span.fast_spell_set { background: #fff; color: #333; }
 a.fast_spell_set { color: #eee; }
