@@ -5,7 +5,7 @@
 
 #chatform { padding: 0; margin: 0; }
 #chatform input[type="text"] { border: 1px solid #ccc; border-top: 0; border-bottom: 0;
-    padding: 2px 7px; height: 35px; margin-top: -1px; background: white; }
+    padding: 2px 7px; height: 35px; margin-top: -1px; background: white; font-size: 13px; }
 #chatform input[type="submit"] { margin-top: -1px; }
 .framechatformbg td:nth-of-type(1) { padding-left: 6px !important; padding-right: 6px !important; }
 .framechatformbg td:nth-of-type(2) { padding-right: 4px; }
@@ -15,7 +15,7 @@
     background-position: left bottom; position: fixed; left: 0; right: 0; bottom: 0; height: 5px; z-index: 1000; content: ""; }
 .framechattextbg:after { background-image: url(i/noise.png); background-repeat: repeat-x; background-attachment: fixed;
     background-position: left top; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 1000; content: ""; }
-.framechattextbg p { font-size: 12px; }
+.framechattextbg p { font-size: 13px; }
 .framechattextbg > *:last-of-type { padding-bottom: 6px; }
 
 /* > Chatcolors */
@@ -42,7 +42,7 @@
 .worldsay,
 .worldsay table,
 .worldsay tbody,
-.worldsay table td { font-size: 10px; }
+.worldsay table td { font-size: 11px; }
 .worldsay table,
 .worldsay tbody { border-collapse: separate; }
 .worldsay { margin: 0 -2px; }

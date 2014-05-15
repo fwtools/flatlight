@@ -52,7 +52,7 @@ span.medium {
 .listitemrow,
 .listitemrow br ~ a,
 .listitemrow br ~ a:hover { display: block; font-size: 0; color: transparent; }
-.listitemrow b { display: inline-block; padding-right: 58px; font-size: 11px; color: #333; }
+.listitemrow b { display: inline-block; padding-right: 58px; font-size: 12px; color: #333; }
 .listitemrow img { display: none; }
 
 .listitemrow a[href^="item.php?action=activate"]:after,

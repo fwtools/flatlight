@@ -31,7 +31,7 @@ foreach($_GET as $k => $v) {
 sort($addons_enabled);
 
 $name = "style-".implode("-", $addons_enabled);
-if(file_exists(__DIR__ . "/static/{$name}.css")) {
+if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 	print file_get_contents(__DIR__ . "/static/{$name}.css");
 	exit;
 }

@@ -5,7 +5,7 @@ table.areadescription .imageborder { padding: 3px;
     position: absolute; left: 4px; top: 4px; }
 
 table.areadescription .mainheader { padding-left: 70px; padding-top: 7px;
-    padding-bottom: 7px; font-size: 20px; background-color: #2980b9; color: #eee;
+    padding-bottom: 7px; font-size: 22px; background-color: #2980b9; color: #eee;
     border-bottom: 1px solid rgba(0,0,0,.2); text-shadow: 1px 1px 5px #888; }
 
 table.areadescription .areadescription { padding: 11px;
@@ -14,7 +14,7 @@ table.areadescription tr:nth-of-type(2) .areadescription { background: #fafafa u
 
 /* Personen & NPCs & Items */
 .listusersrow, .listplaceitemsrow { padding: 3px 8px; border: 1px solid #ccc; border-bottom: 0 solid transparent;
-    font-size: 11px; margin: 0; height: auto; min-height: 0; background: #fafafa;
+    font-size: 12px; margin: 0; height: auto; min-height: 0; background: #fafafa;
     box-shadow: 0 3px 3px -3px rgba(0,0,0,.2); }
 .listusersrow { clear: both; }
 .personlistcaption + .listusersrow,
@@ -24,4 +24,4 @@ table.areadescription tr:nth-of-type(2) .areadescription { background: #fafafa u
 .listplaceitemsrow img { width: 30px; height: 30px; }
 .listusersrow > img { width: 24px; height: 24px; margin: 3px 8px 3px 3px; }
 
-#captchaHolder { box-sizing: content-box; margin: 0 auto; border: 1px solid #ccc; !important; box-shadow: 0 0 4px rgba(0,0,0,.3); }
+#captchaHolder { box-sizing: content-box; margin: 0 auto; border: 1px solid #ccc !important; box-shadow: 0 0 4px rgba(0,0,0,.3); }

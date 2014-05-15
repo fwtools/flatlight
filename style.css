@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import url('//fonts.googleapis.com/css?family=Lato:400,700');
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
 /*******************************************************************************
@@ -8,9 +8,9 @@
 html, body { margin: 0; padding: 0; }
 * { box-sizing: border-box; }
 html { background: #fafafa; }
-body { font-size: 12px; font-family: 'Open Sans', sans-serif; line-height: 1.25; color: #222; }
+body { font-size: 13px; font-family: 'Lato', sans-serif; line-height: 1.25; color: #222; }
 
-th, td { font-size: 12px; font-family: 'Open Sans'; line-height: 1.25; }
+th, td { font-size: 13px; font-family: 'Lato', sans-serif; line-height: 1.25; }
 p { padding: 0; margin: 0; }
 
 a { color: #2980b9; font-weight: bold; text-decoration: none; }
@@ -119,7 +119,7 @@ form[action="friends.php?action=insertuser"] input[name="username"] /* FL: Freun
 	border-radius: 7px;
 	padding: 3px;
 	font-family: sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 .frameitembg textarea {
@@ -322,7 +322,6 @@ img[src$="brief.jpg"] + br {
 }
 
 p.maincaption2 {
-	text-shadow: 1px 1px 2px #888;
 	font-size: 15px;
 	padding: 3px;
 }
@@ -348,7 +347,7 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	background-image: none !important;
 	padding: 2px 5px !important;
 	color: #eee !important;
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: bold;
 }
 
@@ -368,7 +367,7 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 .itemlistcaption[style="width: 550px"] + .listrow td,
 .listcaption[style="width: 550px"] + .listrow td {
 	color: #111 !important;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 .listcaption[style="width: 550px"]  img[src$="icon_view.gif"] {
@@ -422,7 +421,7 @@ td[style*="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; backg
 	padding: 3px 5px;
 	text-decoration: none;
 	text-shadow: 1px 1px 0px #eee;
-	font-size: 10px;
+	font-size: 11px;
 	margin: 0 1px;
 }
 
@@ -469,7 +468,7 @@ div.uwork + br[style="clear: both;"] + br { display: none; }
 .framemapbg td a { display: inline-block; position: relative; width: 50px; height: 50px; }
 
 .framemapbg *[id^="mapx"] a:after {
-	position: absolute; left: 0; right: 0; top: 0; color: #000; font-weight: normal; background: rgba(255, 255, 255, .75); border: 0px solid #eee; box-shadow: 0 5px 5px -5px rgba(0,0,0,.8); font-size: 9px; text-align: center; padding: 2px 0;
+	position: absolute; left: 0; right: 0; top: 0; color: #000; font-weight: normal; background: rgba(255, 255, 255, .75); border: 0px solid #eee; box-shadow: 0 5px 5px -5px rgba(0,0,0,.8); font-size: 10px; text-align: center; padding: 2px 0;
 }
 
 /* Fix für den grünen Zauberkugelindikator */
