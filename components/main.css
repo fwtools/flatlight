@@ -15,8 +15,10 @@ table.areadescription .areadescription { padding: 11px;
 .listusersrow, .listplaceitemsrow { padding: 3px 8px; border: 1px solid #ccc; border-bottom: 0 solid transparent;
     font-size: 11px; margin: 0; height: auto; min-height: 0; background: #fafafa;
     box-shadow: 0 3px 3px -3px rgba(0,0,0,.2); }
+.listusersrow { clear: both; }
 .personlistcaption + .listusersrow,
 .listplaceitemsrow:first-of-type { margin-top: 10px; }
 .listusersrow:last-of-type, .listplaceitemsrow:last-of-type { border-bottom: 1px solid #ccc; }
 .listplaceitemsrow { padding: 5px 10px; }
 .listplaceitemsrow img { width: 30px; height: 30px; }
+.listusersrow img { width: 24px; height: 24px; margin: 3px 8px 3px 3px; }

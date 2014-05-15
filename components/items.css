@@ -3,7 +3,7 @@
 #listrow_int ~ .listcaption a:hover,
 #listrow_int ~ .listcaption a:focus { color: #fff; }
 
-#filterrow { padding: 1px 3px; background: #ddd; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
+#filterrow { padding: 3px; background: #ddd; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
 #filterrow b { padding: 0; }
 
 .listitemrow { position: relative; padding: 2px 3px; padding-left: 9px;
