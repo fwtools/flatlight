@@ -1,6 +1,7 @@
 #fastspell { margin: 4px -6px; margin-bottom: 0; border: 1px solid rgba(0,0,0,.2); border-left: 0;
     border-right: 0; background: #2980b9; text-align: center; color: #eee;
-    padding: 2px 5px; font-weight: 400; width: calc(100% + 12px); }
+    padding: 2px 5px; font-weight: bold; width: calc(100% + 12px);
+    font-size: 13px; text-shadow: 0 2px 1px rgba(0,0,0,.2); }
 #fastspell td { color: #eee; font-size: 13px; }
 
 #fastspell tr > td + td > b { color: transparent; font-size: 0; }

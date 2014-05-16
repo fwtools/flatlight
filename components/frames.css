@@ -17,3 +17,5 @@ html[id^="MapFrame"] { position: relative; height: 295px; }
 .framemenubg { height: 65px; }
 html[id^="ItemFrame"], html[id^="MapFrame"], .framemenubg { border-left: 1px solid #aaa; }
 html[id^="ItemFrame"]:before { position: fixed; left: 0; top: 0; bottom: 0; width: 1px; background: #aaa; content: ""; }
+
+.frameitembg { font-size: 12px; }
