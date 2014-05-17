@@ -75,6 +75,6 @@
 #listrow_special a { width: 0; display: inline-block; font-size: 0; }
 #listrow_special a:before { font-size: 12px; content: "Spezial"; }
 #listrow_status { min-height: 0; }
-#listrow_special + #listrow_status { margin-top: -18px; text-indent: 40px; background: #eee; }
+#listrow_special + #listrow_status { min-height: 18px; margin-top: -18px; text-indent: 40px; background: #eee; }
 #listrow_status .small { font-size: 12px; }
 /* /SPECIAL & STATUS */
