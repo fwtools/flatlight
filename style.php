@@ -3,6 +3,8 @@
 error_reporting(0);
 header("Content-type: text/css; charset=utf-8");
 
+require __DIR__ . "/functions.php";
+
 /* CACHE */
 $time = 240;
 $exp_gmt = gmdate("D, d M Y H:i:s", time() + $time * 60) ." GMT";
@@ -19,6 +21,9 @@ if(isset($_GET['mat']) && is_string($_GET['mat'])) {
 	print "@import 'track/track.php?{$track_id}';";
 }
 
+$world = getWorldByReferer();
+print "@import url('event/style.php?world={$world}');";
+
 $addons_available = ['agg', 'at', 'msf', 'ppf'];
 $addons_enabled = [];
 
@@ -33,6 +38,7 @@ sort($addons_enabled);
 $name = "style-".implode("-", $addons_enabled);
 if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 	print file_get_contents(__DIR__ . "/static/{$name}.css");
+	require __DIR__ . "/event/pensal_addon.php";
 	exit;
 }
 
@@ -86,3 +92,5 @@ $css_min = CssMin::minify($css, $filters, $plugins);
 
 file_put_contents(__DIR__ . "/static/{$name}.css", $css_min);
 print $css_min;
+
+require __DIR__ . "/event/pensal_addon.php";

@@ -16,7 +16,7 @@ a[href="map.php?reload=1"]:after { content: " Aktualisieren"; }
 a[href="map.php?reload=1"]:hover { text-decoration: none; }
 a[href="map.php?reload=1"] img { display: none; }
 
-.positiontext { position: absolute; right: 0; left: 0; top: 0; line-height: 18px;
+.positiontext { position: absolute; right: 0; left: 0; top: 0; line-height: 19px;
     text-align: right; font-size: 11px; color: #eee; padding: 0px 12px 0px 3px; height: 20px;
     border-bottom: 1px solid rgba(0,0,0,.2); background: #2980b9; font-weight: bold;
     text-shadow: 0 2px 1px rgba(0,0,0,.2); }

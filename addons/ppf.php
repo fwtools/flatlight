@@ -23,7 +23,6 @@ $addon = function() use ($config, $db) {
 
     $css.= ".listusersrow>b+br+br+img~a:after{color:#222;display:block;}";
     $css.= ".listusersrow>b+br+br+img~a:hover{text-decoration:none;}";
-    $css.= ".listusersrow>b+br+br+img~a~br,.listusersrow>b+br+br~br+br+br+br{display:none;}";
 
     return $css;
 };

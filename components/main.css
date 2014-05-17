@@ -25,3 +25,8 @@ table.areadescription tr:nth-of-type(2) .areadescription { background: #fafafa u
 .listusersrow > img { width: 24px; height: 24px; margin: 3px 8px 3px 3px; }
 
 #captchaHolder { box-sizing: content-box; margin: 0 auto; border: 1px solid #ccc !important; box-shadow: 0 0 4px rgba(0,0,0,.3); }
+
+/* PORTALE */
+.listusersrow>b+br+br+img~a~br,.listusersrow>b+br+br~br+br+br+br{display:none;}
+.listusersrow>b+br+br+img { width: 50px; height: 50px; }
+/* /PORTALE */
