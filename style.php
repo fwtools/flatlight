@@ -19,7 +19,7 @@ if(isset($_GET['mat']) && is_string($_GET['mat'])) {
 	print "@import 'track/track.php?{$track_id}';";
 }
 
-$addons_available = ['agg', 'at', 'msf'];
+$addons_available = ['agg', 'at', 'msf', 'ppf'];
 $addons_enabled = [];
 
 foreach($_GET as $k => $v) {
