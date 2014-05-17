@@ -63,14 +63,6 @@
 #listrow_status + div[align="center"] { display: none; }
 /* MINOR TWEAKS */
 
-/* WAFFEN */
-#listrow_attackw, #listrow_defensew { height: 0; min-height: 0; border: 0; font-size: 0;
-    color: transparent; padding: 0; margin: 0; }
-/* (durch Waffe) entfernen */
-#listrow_attackp { height: 18px; overflow: hidden; }
-#listrow_attackp .valueincreased:after { display: inline-block; width: 200px; content: ""; }
-/* /WAFFEN */
-
 /* HIGHLIGHT IMPORTANT INFO */
 #listrow_money > b, #listrow_lifep > b, #listrow_int > b, #listrow_attackp > b,
 #listrow_attackw > b, #listrow_defensep > b, #listrow_defensew > b { font-weight: normal; }

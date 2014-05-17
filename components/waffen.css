@@ -1,4 +1,19 @@
-#listrow_attackw a:after,#listrow_defensew a:after{display:inline-block;float:right;font-size:12px;margin-right:3px;margin-top:-18px;height:18px;line-height:16px;}
+/* (durch Waffe) entfernen */
+#listrow_attackp { height: 18px; overflow: hidden; }
+#listrow_attackp .valueincreased:after { display: inline-block; width: 200px; content: ""; }
+
+#listrow_attackw, #listrow_defensew { display: inline-block; float: right; font-size: 0;
+    margin-right: 3px; margin-top: -18px; height: 18px; line-height: 12px; position: relative;
+    background: #fafafa; transition: width 250ms, color 250ms, font-size 250ms; color: #eee; width: 30px; overflow-y: hidden; }
+#listrow_defensew { background: #eee; }
+
+#listrow_attackw:hover, #listrow_defensew:hover { font-weight: normal; padding-left: 4px;
+    width: calc(100% + 2px); font-size: 12px; color: #222; }
+
+#listrow_attackw b, #listrow_defensew b { display: inline-block; position: absolute; right: 0;
+    top: 2px; font-size: 0; }
+
+#listrow_attackw a:after, #listrow_defensew a:after { display: inline-block; font-size: 12px; }
 
 #listrow_attackw[title$='1%'] a:after,#listrow_defensew[title$='1%'] a:after{content:'1%'}
 #listrow_attackw[title$='2%'] a:after,#listrow_defensew[title$='2%'] a:after{content:'2%'}
