@@ -61,7 +61,8 @@
 
 /* Hochhalten */
 table[style="border: 1px solid #C85424;"] { margin: 0 -2px; border: 0 solid rgba(0,0,0,0) !important; }
-table[style="border: 1px solid #C85424;"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important; border: 1px solid rgba(0,0,0,.2) !important; }
+table[style="border: 1px solid #C85424;"] td { padding: 2px 5px; background-color: #ffe !important; color: #333 !important;
+    border: 1px solid rgba(0,0,0,.2) !important; font-size: 12px; }
 table[style="border: 1px solid #C85424;"] img { width: 24px; height: 24px; margin: 4px 8px 4px 0; }
 /* > Bilder im Chat */
 img[src="http://voting.gdynamite.de/images/gd_animbutton.gif"] { display: none; }

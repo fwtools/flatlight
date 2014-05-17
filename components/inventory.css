@@ -60,6 +60,7 @@
 #listrow_int > b:first-of-type:after, #listrow_money > b:first-of-type:after { font-size: 12px; width: 17px; display: inline-block; }
 #listrow_int > b:first-of-type:after { content: ""; }
 #listrow_money > b:first-of-type:after { content: ""; }
+#listrow_status + div[align="center"] { display: none; }
 /* MINOR TWEAKS */
 
 /* WAFFEN */
