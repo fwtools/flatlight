@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^flatlight redirect.php?l=http%3A%2F%2Fforum.freewar.de%2Fviewtopic.php%3Ff%3D18%26t%3D53241

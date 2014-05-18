@@ -6,14 +6,13 @@ header("Content-type: text/css; charset=utf-8");
 require __DIR__ . "/../functions.php";
 
 /* CACHE */
-$time = 30;
-$exp_gmt = gmdate("D, d M Y H:i:s", time() - time() % (30 * 60) + $time * 60) ." GMT";
-$mod_gmt = gmdate("D, d M Y H:i:s", filemtime(__DIR__ . "/style.php")) ." GMT";
+$exp_gmt = gmdate("D, d M Y H:i:s", time() + 60 - time() % 60) ." GMT";
+$mod_gmt = gmdate("D, d M Y H:i:s", time()) ." GMT";
 
 header("Expires: " . $exp_gmt);
 header("Last-Modified: " . $mod_gmt);
-header("Cache-Control: private, max-age=" . ($time * 60 - time() % (30 * 60)));
-header("Cache-Control: pre-check=" . ($time * 60 - time() % (30 * 60)), FALSE);
+header("Cache-Control: private, max-age=" . (60 - time() % 60));
+header("Cache-Control: pre-check=" . (60 - time() % 60), FALSE);
 /* // CACHE */
 
 require_once __DIR__ . "/../lib/cssmin-v3.0.1-minified.php";

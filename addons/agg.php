@@ -19,7 +19,7 @@ $addon = function() use ($config, $db) {
 
 	foreach($orte as $x => $arr) {
 		foreach($arr as $y => $text) {
-			$text = str_replace('oder', ',', $text);
+			$text = str_replace(['oder', '-'], ',', $text);
 			$vals = explode(',', $text);
 			$min = -1;
 			$max = -1;

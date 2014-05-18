@@ -5,10 +5,25 @@ header("Content-type: text/css; charset=utf-8");
 
 require __DIR__ . "/functions.php";
 
+$addons_available = ['agg', 'at', 'msf', 'ppf'];
+$addons_enabled = [];
+
+foreach($_GET as $k => $v) {
+	if(in_array($k, $addons_available)) {
+		$addons_enabled[] = $k;
+	}
+}
+
+sort($addons_enabled);
+$name = "style-".implode("-", $addons_enabled);
+
 /* CACHE */
 $time = 240;
 $exp_gmt = gmdate("D, d M Y H:i:s", time() + $time * 60) ." GMT";
-$mod_gmt = gmdate("D, d M Y H:i:s", filemtime(__DIR__ . "/style.php")) ." GMT";
+$mod_gmt = gmdate("D, d M Y H:i:s", file_exists(__DIR__ . "/static/{$name}.css")
+		? filemtime(__DIR__ . "/static/{$name}.css")
+		: time()
+) ." GMT";
 
 header("Expires: " . $exp_gmt);
 header("Last-Modified: " . $mod_gmt);
@@ -21,24 +36,30 @@ if(isset($_GET['mat']) && is_string($_GET['mat'])) {
 	print "@import 'track/track.php?{$track_id}';";
 }
 
-$world = getWorldByReferer();
-print "@import url('event/style.php?world={$world}');";
+$world = isset($_GET['world']) && is_string($_GET['world']) ? $_GET['world'] : '';
 
-$addons_available = ['agg', 'at', 'msf', 'ppf'];
-$addons_enabled = [];
-
-foreach($_GET as $k => $v) {
-	if(in_array($k, $addons_available)) {
-		$addons_enabled[] = $k;
-	}
+if(!in_array($world, ['de1', 'de2', 'de3', 'de4', 'de5', 'de6', 'de7', 'de8', 'de9', 'de10', 'de11', 'de12', 'de13', 'de14'])) {
+	$world = "";
 }
 
-sort($addons_enabled);
+print "@import url('event/style.php?world={$world}');";
 
-$name = "style-".implode("-", $addons_enabled);
 if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 	print file_get_contents(__DIR__ . "/static/{$name}.css");
 	require __DIR__ . "/event/pensal_addon.php";
+
+	if(!isset($_GET['world'])) {
+		$currLink = "http://fw.jshack.org".$_SERVER['REQUEST_URI'];
+
+		$newLink = strpos($currLink, '?') === false
+				? "{$currLink}?world=XXX"
+				: "{$currLink}&world=XXX";
+		$worlds = "de1,de2,de3,...,de13,de14";
+
+		print ".framemainbg:after { display: block; padding: 8px; margin: 8px -10px; background: #fb9; border: 1px solid rgba(0,0,0,.2); border-left: 0; border-right: 0;
+			content: 'Bitte ergänze deinen Link!\AMomentan: {$currLink}\AÄnderung: {$newLink}\AXXX ist dabei deine Welt: {$worlds}'; white-space: pre; }";
+	}
+
 	exit;
 }
 
@@ -94,3 +115,15 @@ file_put_contents(__DIR__ . "/static/{$name}.css", $css_min);
 print $css_min;
 
 require __DIR__ . "/event/pensal_addon.php";
+
+if(!isset($_GET['world'])) {
+	$currLink = "http://fw.jshack.org".$_SERVER['REQUEST_URI'];
+
+	$newLink = strpos($currLink, '?') === false
+			? "{$currLink}?world=XXX"
+			: "{$currLink}&world=XXX";
+	$worlds = "de1,de2,de3,...,de13,de14";
+
+	print ".framemainbg:after { display: block; padding: 8px; margin: 8px -10px; background: #fb9; border: 1px solid rgba(0,0,0,.2); border-left: 0; border-right: 0;
+		content: 'Bitte ergänze deinen Link!\AMomentan: {$currLink}\AÄnderung: {$newLink}\AXXX ist dabei deine Welt: {$worlds}'; white-space: pre; }";
+}
