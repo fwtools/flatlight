@@ -6,7 +6,7 @@
 #filterrow { padding: 3px; background: #ddd; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
 #filterrow b { padding: 0; }
 
-.listitemrow { position: relative; padding: 2px 3px; padding-left: 9px;
+.listitemrow { position: relative; padding: 2px 3px; padding-left: 9px; padding-right: 70px;
     background: #fafafa; width: calc(100% + 12px); margin: 0 -6px; min-height: 18px; }
 .listitemrow:nth-of-type(2n) { background: #eee; }
 
@@ -14,12 +14,7 @@
 
 .listitemrow * { z-index: 2; }
 
-/* :TODO: What does this change? */
-span.medium {
-    display: inline-block;
-}
-
-#filterrow ~ .listitemrow br {
+#listrow_int ~ .listitemrow br {
     display: none;
 }
 
@@ -36,63 +31,63 @@ span.medium {
 
 .itemmagic { color: #0a0; }
 
-#filterrow ~ .listitemrow .itemmagic { width: 0; font-size: 0; color: transparent; }
-#filterrow ~ .listitemrow .itemmagic:before {
+.listitemrow .itemmagic { width: 0; font-size: 0; color: transparent; }
+.listitemrow .itemmagic:before {
     content: ""; display: block; position: absolute; width: auto;
     top: 0; left: 1px; bottom: 0; width: 4px;
 }
-
-#filterrow ~ .listitemrow .itemmagic:before             { background: #bb7857; }
-#filterrow ~ .listitemrow .itemmagic.magicextend:before { background: #83bb57; }
+.listitemrow .itemmagic:before             { background: #bb7857; }
+.listitemrow .itemmagic.magicextend:before { background: #83bb57; }
 
 /*
  * Item-Komprimierung
  */
 
-.listitemrow,
-.listitemrow br ~ a,
-.listitemrow br ~ a:hover { display: block; font-size: 0; color: transparent; }
-.listitemrow b { display: inline-block; padding-right: 58px; font-size: 12px; color: #333; }
-.listitemrow img { display: none; }
+#listrow_int ~ .listitemrow,
+#listrow_int ~ .listitemrow br ~ a,
+#listrow_int ~ .listitemrow br ~ a:hover { display: block; font-size: 0; color: transparent; }
+#listrow_int ~ .listitemrow b { word-break: break-word; }
+#listrow_int ~ .listitemrow b { font-size: 12px; color: #333; }
+#listrow_int ~ .listitemrow img { display: none; }
 
-.listitemrow a[href^="item.php?action=activate"]:after,
-.listitemrow a[href^="item.php?action=watch"]:after,
-.listitemrow a[href^="item.php?action=transfer1"]:after,
-.listitemrow a[href^="item.php?action=manytransfer1"]:after,
-.listitemrow a[href^="item.php?action=manydrop"]:after { color: #666;
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:after { color: #666;
     font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; font-size: 14px; }
 
-.listitemrow a[href^="item.php?action=activate"],
-.listitemrow a[href^="item.php?action=activate"]:hover,
-.listitemrow a[href^="item.php?action=watch"],
-.listitemrow a[href^="item.php?action=watch"]:hover,
-.listitemrow a[href^="item.php?action=transfer1"],
-.listitemrow a[href^="item.php?action=transfer1"]:hover,
-.listitemrow a[href^="item.php?action=manytransfer1"],
-.listitemrow a[href^="item.php?action=manytransfer1"]:hover,
-.listitemrow a[href^="item.php?action=manydrop"],
-.listitemrow a[href^="item.php?action=manydrop"]:hover { text-decoration: none; width: 16px; height: 16px;
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:hover,
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:hover,
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:hover,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:hover,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:hover { text-decoration: none; width: 16px; height: 16px;
     position: absolute; top: 3px; z-index: 3; }
 
-.listitemrow a[href^="item.php?action=activate"] { right: 49px; }
-.listitemrow a[href^="item.php?action=watch"] { right: 33px; }
-.listitemrow a[href^="item.php?action=transfer1"] { right: 17px; }
-.listitemrow a[href^="item.php?action=manytransfer1"] { right: 17px; }
-.listitemrow a[href^="item.php?action=manydrop"] { right: 1px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"] { right: 49px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"] { right: 33px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"] { right: 17px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"] { right: 17px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"] { right: 1px; }
 
-.listitemrow a[href^="item.php?action=activate"]:after { content: "\f10c"; }
-.listitemrow a[href^="item.php?action=watch"]:after { content: "\f06e"; font-size: 12px; }
-.listitemrow a[href^="item.php?action=transfer1"]:after { content: "\f138"; }
-.listitemrow a[href^="item.php?action=manytransfer1"]:after { content: "\f138"; }
-.listitemrow a[href^="item.php?action=manydrop"]:after { content: "\f13a"; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:after { content: "\f10c"; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:after { content: "\f06e"; font-size: 12px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:after { content: "\f138"; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:after { content: "\f138"; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:after { content: "\f13a"; }
 
-.listitemrow a[href^="item.php?action=watch"]:hover:after,
-.listitemrow a[href^="item.php?action=transfer1"]:hover:after,
-.listitemrow a[href^="item.php?action=manytransfer1"]:hover:after,
-.listitemrow a[href^="item.php?action=manydrop"]:hover:after,
-.listitemrow a[href^="item.php?action=activate"]:hover:after { color: #2980b9; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:hover:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:hover:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:hover:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:hover:after,
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:hover:after { color: #2980b9; }
 
-.listitemrow a[href^="item.php?action=watch"] img,
-.listitemrow a[href^="item.php?action=transfer1"] img,
-.listitemrow a[href^="item.php?action=manytransfer1"] img,
-.listitemrow a[href^="item.php?action=manydrop"] img { display: none; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"] img,
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"] img,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"] img,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"] img { display: none; }

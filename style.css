@@ -132,8 +132,6 @@ form[action="friends.php?action=insertuser"] input[name="username"] /* FL: Freun
 	color: #222;
 }
 
-/* Feldbeschreibungen */
-
 /* FLÜSTERN */
 .listusersrow img[src$="blase.gif"], .friendlist img[src$="blase.gif"] { display: none; }
 a[href^="main.php?action=whisperuser&act_user_id="]:after { content: "\f075"; }
@@ -278,12 +276,12 @@ form[action="friends.php?action=insertuser"] input[name="username"] {
 }
 
 .fastattack {
-	color: #08c !important;
+	color: #2980b9 !important;
 	font-size: 15px;
 }
 
 .fastattack:hover {
-	color: #08f !important;
+	color: #3498db !important;
 }
 
 p.maincaption {
@@ -341,32 +339,37 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 /* Errungenschaften */
 
 .itemlistcaption[style="width: 550px"], .listcaption[style="width: 550px"] {
-	border-radius: 5px 5px 0 0 !important;
-	background-color: #333 !important;
-	border: 0 !important;
+	border-radius: 0 0 !important;
+	background-color: #2980b9 !important;
+	border: 1px solid rgba(0,0,0,.2) !important;
 	background-image: none !important;
-	padding: 2px 5px !important;
+	padding: 4px 8px !important;
 	color: #eee !important;
 	font-size: 13px;
 	font-weight: bold;
 }
 
+.itemlistcaption[style="width: 550px"] a, .listcaption[style="width: 550px"] a,
+.itemlistcaption[style="width: 550px"] a:hover, .listcaption[style="width: 550px"] a:hover {
+    color: #fff;
+}
+
 .itemlistcaption[style="width: 550px"] + .listrow,
 .listcaption[style="width: 550px"] + .listrow {
-	border-radius: 0 0 5px 5px !important;
-	background-color: #555 !important;
-	border: 0 !important;
-	padding: 2px 5px !important;
+	background-color: #eee !important;
+	border: 1px solid rgba(0,0,0,.2) !important;
+    border-bottom: 0;
+	padding: 4px 4px !important;
 }
 
 .itemlistcaption[style="width: 550px"] + .listrow img,
 .listcaption[style="width: 550px"] + .listrow img {
-	opacity: .8;
+	opacity: .9;
 }
 
 .itemlistcaption[style="width: 550px"] + .listrow td,
 .listcaption[style="width: 550px"] + .listrow td {
-	color: #111 !important;
+	color: #222 !important;
 	font-size: 12px;
 }
 
@@ -376,8 +379,9 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	height: 16px;
 	background: url(i/eye.png);
 	background-repeat: no-repeat;
-	margin-top: 1px;
+	margin-top: -2px;
 	padding-left: 16px;
+    margin-right: 5px;
 	overflow: hidden;
 }
 
@@ -387,8 +391,9 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	height: 16px;
 	background: url(i/eye2.png);
 	background-repeat: no-repeat;
-	margin-top: 1px;
+	margin-top: -2px;
 	padding-left: 16px;
+    margin-right: 5px;
 	overflow: hidden;
 }
 

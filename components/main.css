@@ -24,6 +24,9 @@ table.areadescription tr:nth-of-type(2) .areadescription { background: #fafafa u
 .listplaceitemsrow { padding: 5px 10px; }
 .listusersrow > img, .listplaceitemsrow img { width: 24px; height: 24px; margin: 3px 8px 3px 3px; }
 
+.aggressivenpc { color: #d00; display: inline-block; padding-right: 3px; }
+.aggressivenpc:before { font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f071"; padding-left: 4px; padding-right: 2px; }
+
 #captchaHolder { box-sizing: content-box; margin: 0 auto; border: 1px solid #ccc !important; box-shadow: 0 0 4px rgba(0,0,0,.3); }
 
 /* PORTALE */

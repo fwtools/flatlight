@@ -7,7 +7,7 @@
 .frameitembg .listrow { padding: 2px 5px; min-height: 18px; background: #fafafa; font-size: 12px; }
 .frameitembg .listrow a:hover { text-decoration: none !important; }
 
-.frameitembg p:first-of-type { margin-top: -6px; }
+.frameitembg p.listcaption:first-of-type { margin-top: -6px; }
 .frameitembg .listcaption, .frameitembg .listrow { margin-left: -6px; margin-right: -6px; }
 /* /GENERAL */
 
