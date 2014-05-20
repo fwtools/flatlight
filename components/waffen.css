@@ -216,7 +216,7 @@
 #listrow_attackw[title$='199%'] a:after,#listrow_defensew[title$='199%'] a:after{content:'199%'}
 #listrow_attackw[title$='200%'] a:after,#listrow_defensew[title$='200%'] a:after{content:'200%'}
 
-#listrow_attackw a:after{color:#0a0}
+#listrow_attackw a:after{color:#27ae60}
 #listrow_attackw[title$=" 9%"] a:after,
 #listrow_attackw[title$=" 8%"] a:after,
 #listrow_attackw[title$=" 7%"] a:after,
@@ -225,9 +225,9 @@
 #listrow_attackw[title$=" 4%"] a:after,
 #listrow_attackw[title$=" 3%"] a:after,
 #listrow_attackw[title$=" 2%"] a:after,
-#listrow_attackw[title$=" 1%"] a:after {color:#a00}
+#listrow_attackw[title$=" 1%"] a:after {color:#c0392b}
 
-#listrow_defensew a:after{color:#0a0}
+#listrow_defensew a:after{color:#27ae60}
 #listrow_defensew[title$=" 9%"] a:after,
 #listrow_defensew[title$=" 8%"] a:after,
 #listrow_defensew[title$=" 7%"] a:after,
@@ -236,6 +236,6 @@
 #listrow_defensew[title$=" 4%"] a:after,
 #listrow_defensew[title$=" 3%"] a:after,
 #listrow_defensew[title$=" 2%"] a:after,
-#listrow_defensew[title$=" 1%"] a:after {color:#a00}
+#listrow_defensew[title$=" 1%"] a:after {color:#c0392b}
 
 #listrow_attackw:not([title]) a[href="item.php?action=aselect"]:after,#listrow_defensew:not([title]) a[href="item.php?action=dselect"]:after{content:"\2014";font-weight:normal;color:#333 !important;}

@@ -24,12 +24,12 @@
     display: inline-block;
     font-weight: bold;
     font-size: 11px;
-    color: #d00;
+    color: #27ae60;
 }
 
 .listitemrow .itemamount { padding-right: 2px; }
 
-.itemmagic { color: #0a0; }
+.itemmagic { color: #27ae60; }
 
 .listitemrow .itemmagic { width: 0; font-size: 0; color: transparent; }
 .listitemrow .itemmagic:before {

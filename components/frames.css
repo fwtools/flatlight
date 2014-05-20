@@ -19,3 +19,5 @@ html[id^="ItemFrame"], html[id^="MapFrame"], .framemenubg { border-left: 1px sol
 html[id^="ItemFrame"]:before { position: fixed; left: 0; top: 0; bottom: 0; width: 1px; background: #aaa; content: ""; }
 
 .frameitembg { font-size: 12px; }
+
+#MapFrameID2 { padding: 8px; }

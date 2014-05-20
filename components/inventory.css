@@ -41,7 +41,7 @@
 #listrow_clan a[href="fight.php?action=groupjoinrand"]:after {
     padding-left: 3px; content: " Gruppe"; }
 
-#listrow_group { position: absolute; z-index: 2; right: 6px; left: calc(50% + 6px); background: red; text-align: center; margin-top: -18px; background: #eee; border: 0; }
+#listrow_group { position: absolute; z-index: 2; right: 6px; left: calc(50% + 6px); background: red; text-align: center; margin-top: -19px; background: #eee; border: 0; }
 /* /GROUP */
 
 /* LIFEPOINTS */

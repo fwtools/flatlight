@@ -51,16 +51,16 @@ input[type="submit"] { margin-top: 3px; }
 /* /Logout-Screen */
 
 /* > Lebenspunkte & Erweitere Anzeige */
-.healthok, #listrow_attackp .valueincreased, #listrow_defensep .valueincreased {
-	color: #0a0;
+.healthok, .valueincreased {
+	color: #27ae60;
 }
 
 .healthcritical {
-	color: #f20;
+	color: #c0392b;
 }
 
 .healthmed {
-	color: #f90;
+	color: #d35400;
 }
 
 /* JS-Tooltips */
@@ -275,15 +275,6 @@ form[action="friends.php?action=insertuser"] input[name="username"] {
 	width: 300px;
 }
 
-.fastattack {
-	color: #2980b9 !important;
-	font-size: 15px;
-}
-
-.fastattack:hover {
-	color: #3498db !important;
-}
-
 p.maincaption {
 	text-shadow: 1px 1px 5px #888;
 	font-size: 25px;
@@ -349,6 +340,11 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	font-weight: bold;
 }
 
+.itemlistcaption[style="width: 550px"], .listcaption[style="width: 550px"],
+.itemlistcaption[style="width: 550px"] + .listrow, .listcaption[style="width: 550px"] + .listrow {
+    width: 100% !important;
+}
+
 .itemlistcaption[style="width: 550px"] a, .listcaption[style="width: 550px"] a,
 .itemlistcaption[style="width: 550px"] a:hover, .listcaption[style="width: 550px"] a:hover {
     color: #fff;
@@ -373,29 +369,11 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 	font-size: 12px;
 }
 
-.listcaption[style="width: 550px"]  img[src$="icon_view.gif"] {
-	display: inline-block;
-	width: 0px;
-	height: 16px;
-	background: url(i/eye.png);
-	background-repeat: no-repeat;
-	margin-top: -2px;
-	padding-left: 16px;
-    margin-right: 5px;
-	overflow: hidden;
-}
-
-.listcaption[style="width: 550px"]  img[src$="icon_view2.gif"] {
-	display: inline-block;
-	width: 0px;
-	height: 16px;
-	background: url(i/eye2.png);
-	background-repeat: no-repeat;
-	margin-top: -2px;
-	padding-left: 16px;
-    margin-right: 5px;
-	overflow: hidden;
-}
+.listcaption[style="width: 550px"] img { display: none; }
+.listcaption[style="width: 550px"] a, .listcaption[style="width: 550px"] a:hover { text-decoration: none; font-size: 0; display: inline-block; }
+.listcaption[style="width: 550px"] a:after { font-size: 15px; line-height: 13px; font-family: FontAwesome; font-style: normal; font-weight: normal; }
+.listcaption[style="width: 550px"] a[title$="ein)"]:after { content: "\f06e"; color: #fff; }
+.listcaption[style="width: 550px"] a[title$="aus)"]:after { content: "\f070"; color: #fa9; }
 
 /* Unterkünfte */
 

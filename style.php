@@ -46,7 +46,10 @@ print "@import url('event/style.php?world={$world}');";
 
 if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 	print file_get_contents(__DIR__ . "/static/{$name}.css");
-	require __DIR__ . "/event/pensal_addon.php";
+
+	if(!empty($world)) {
+		require __DIR__ . "/event/pensal_addon.php";
+	}
 
 	if(!isset($_GET['world'])) {
 		$currLink = "http://fw.jshack.org".$_SERVER['REQUEST_URI'];
@@ -114,7 +117,9 @@ $css_min = CssMin::minify($css, $filters, $plugins);
 file_put_contents(__DIR__ . "/static/{$name}.css", $css_min);
 print $css_min;
 
-require __DIR__ . "/event/pensal_addon.php";
+if(!empty($world)) {
+	require __DIR__ . "/event/pensal_addon.php";
+}
 
 if(!isset($_GET['world'])) {
 	$currLink = "http://fw.jshack.org".$_SERVER['REQUEST_URI'];
