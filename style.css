@@ -453,22 +453,3 @@ div.uwork + br[style="clear: both;"] + br { display: none; }
 .framemapbg *[id^="mapx"] a:after {
 	position: absolute; left: 0; right: 0; top: 0; color: #000; font-weight: normal; background: rgba(255, 255, 255, .75); border: 0px solid #eee; box-shadow: 0 5px 5px -5px rgba(0,0,0,.8); font-size: 10px; text-align: center; padding: 2px 0;
 }
-
-/* Fix für den grünen Zauberkugelindikator */
-#itemunusedzk.listitemrow {
-	border-radius: 0 !important;
-}
-
-.listitemrow[id^="itemarea"] {
-	min-height: 45px;
-	position: relative;
-	padding-right: 80px;
-	white-space: normal;
-	border-radius: 0 !important;
-}
-
-.listitemrow[id^="itemarea"] .areaimg {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
