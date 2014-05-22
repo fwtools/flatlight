@@ -41,27 +41,42 @@
 #listrow_clan a[href="fight.php?action=groupjoinrand"]:after {
     padding-left: 3px; content: " Gruppe"; }
 
-#listrow_group { position: absolute; z-index: 2; right: 6px; left: calc(50% + 6px); background: red; text-align: center; margin-top: -19px; background: #eee; border: 0; }
+#listrow_group { position: absolute; z-index: 2; right: 6px; left: calc(50% + 6px);
+    background: red; text-align: center; margin-top: -18px; background: #eee; border: 0; }
 /* /GROUP */
 
 /* LIFEPOINTS */
 #listrow_lifep { position: absolute; right: 0; background: #fff; margin: 0;
     z-index: 10000; font-size: 16px; border: 1px solid rgba(0,0,0,.2);
-    padding: 6px 5px; height: 38px; line-height: 24px; border-right: 0;
+    padding: 6px 5px; height: 36px; line-height: 24px; border-right: 0;
     box-shadow: 0 0 3px rgba(0,0,0,.1); }
 #listrow_lifep > b { display: none; }
 #listrow_lifep > span > b { font-weight: bold; }
 /* /LIFEPOINTS */
 
 /* MINOR TWEAKS */
-#listrow_money img[src$="icon_gold.gif"] { width: 12px; height: 12px; margin-right: -9px; }
-#listrow_int > b:first-of-type, #listrow_money > b:first-of-type { font-size: 0; width: 0; display: inline-block; }
+#listrow_int > b:first-of-type, #listrow_money > b:first-of-type { font-size: 0; display: inline-block; }
 #listrow_int > b:first-of-type { width: 0; }
-#listrow_int > b:first-of-type:after, #listrow_money > b:first-of-type:after { font-size: 12px; width: 17px; display: inline-block; }
-#listrow_int > b:first-of-type:after { content: ""; }
-#listrow_money > b:first-of-type:after { content: ""; }
 #listrow_status + div[align="center"] { display: none; }
 /* MINOR TWEAKS */
+
+/* MONEY */
+#listrow_money { height: 18px; overflow: hidden; width: 200%; }
+#listrow_money img[src$="icon_gold.gif"] { display: inline-block; width: 0; padding-right: 200px; }
+#listrow_money b:before { content: "\f1c0"; font-size: 11px; font-family: FontAwesome;
+    font-style: normal; font-weight: normal; color: #f1c11f; margin-right: 4px; line-height: 11px;
+    transform: translateY(2px); }
+#listrow_money a { display: inline-block; }
+#listrow_money a img { display: none; }
+#listrow_money a[href="item.php?action=moneydrop1"] { text-indent: -205px; }
+#listrow_money a[href="item.php?action=moneytransfer1"] { text-indent: -195px; }
+#listrow_money a:after { font-family: FontAwesome; font-weight: normal; font-style: normal; }
+#listrow_money a[href="item.php?action=moneydrop1"]:after { content: "\f13a"; }
+#listrow_money a[href="item.php?action=moneytransfer1"]:after { content: "\f138"; }
+#listrow_money::selection { background: transparent; }
+#listrow_money::-moz-selection { background: transparent; }
+
+/* /MONEY */
 
 /* HIGHLIGHT IMPORTANT INFO */
 #listrow_money > b, #listrow_lifep > b, #listrow_int > b, #listrow_attackp > b,

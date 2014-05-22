@@ -14,13 +14,13 @@ span.fast_spell_set { background: #fff; color: #333; }
 a.fast_spell_set { color: #eee; }
 a.fast_spell_set:hover, a.fast_spell_set:focus { color: #fff; text-decoration: none; }
 
-table[id^="fastspell"]:not(#fastspell) { margin: 0 -6px; padding: 2px 5px; width: calc(100% + 12px); background-color: #fafafa; }
+table[id^="fastspell"]:not(#fastspell) { height: 18px; margin: 0 -6px; padding: 2px 5px; width: calc(100% + 12px); background-color: #fafafa; }
 table[id^="fastspell"]:not(#fastspell):nth-of-type(2n) { background-color: #eee; }
 
-table[id^="fastspell"] + .small { display: block; padding: 3px 1px; background-color: #ddd;
+table[id^="fastspell"] + .small { display: block; padding: 1px 1px; background-color: #ddd;
     font-size: 12px; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
 
-table[id^="fastspell"]:not(#fastspell):last-of-type + .small a { color: #666; text-decoration: none; }
+table[id^="fastspell"]:not(#fastspell):last-of-type + .small a { color: #666; text-decoration: none; font-weight: bold; }
 table[id^="fastspell"]:not(#fastspell):last-of-type + .small a:hover { color: #444; }
 table[id^="fastspell"]:not(#fastspell):last-of-type + .small br { display: none; }
 table[id^="fastspell"]:not(#fastspell):last-of-type + .small:empty { display: none; }
@@ -34,4 +34,4 @@ table[id^="fastspell"]:not(#fastspell) a:hover { color: #111; }
 table[id^="fastspell"]:not(#fastspell) img[src$="close.gif"],
 #close1 img[src$="close.gif"], #close2 img[src$="close.gif"] {
     display: inline-block; width: 0px; height: 10px; background: url(i/rcsmall.png);
-    background-repeat: no-repeat; margin-top: 1px; padding-left: 10px; overflow: hidden; }
+    background-repeat: no-repeat; margin-top: 2px; padding-left: 10px; overflow: hidden; }

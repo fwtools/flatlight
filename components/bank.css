@@ -1,0 +1,13 @@
+form[name="bank"] table { border-collapse: collapse; border: 1px solid rgba(0,0,0,.1); }
+form[name="bank"] tr td { background: #fefefe; padding: 2px 6px; }
+form[name="bank"] tr:nth-of-type(2n) td { background: #eee; }
+
+form[name="bank"] a { float: right; margin: 4px 2px; display: inline-block; margin-left: 5px; }
+form[name="bank"] span[style="font-size: .8em;"] { font-size: 0 !important; }
+form[name="bank"] span[style="font-size: .8em;"] span { font-size: 10px !important;
+    height: 20px; width: 20px; border-radius: 50%; background: #3498db; color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.2); margin: 0 6px; display: inline-block;
+    padding: 0; line-height: 20px; padding-right: 1px; text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2) inset; font-weight: bold; }
+
+form[name="bank"] b[onmouseover^="tt('gepresste Zauberkugel'"] { color: #d00; }

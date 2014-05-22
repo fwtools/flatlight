@@ -44,6 +44,27 @@ if(!in_array($world, ['de1', 'de2', 'de3', 'de4', 'de5', 'de6', 'de7', 'de8', 'd
 
 print "@import url('event/style.php?world={$world}');";
 
+require_once __DIR__ . "/../../../config.php";
+$world_by_ref = getWorldByReferer();
+
+if($world_by_ref != $world) {
+	$db = "mysql:host={$config['db']['hostname']};";
+	$db.= "dbname={$config['db']['database']};charset=utf8";
+	$db = new PDO($db, $config['db']['username'], $config['db']['password']);
+
+	$q = $db->prepare('INSERT INTO fw_flatlight_event (world, event, time) VALUES (?, ?, ?)');
+	$q->execute([$world, 'ine '.$world_by_ref, time()]);
+
+	$head = "";
+
+	foreach (getallheaders() as $k => $v) {
+	    $head.= "{$k}: {$v}\n";
+	}
+
+	$q = $db->prepare('INSERT INTO fw_flatlight_requests (head, time) VALUES (?, ?)');
+	$q->execute([$head, time()]);
+}
+
 if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 	print file_get_contents(__DIR__ . "/static/{$name}.css");
 
@@ -67,7 +88,6 @@ if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 }
 
 require_once __DIR__ . "/lib/cssmin-v3.0.1-minified.php";
-require_once __DIR__ . "/../../../config.php";
 
 $db = "mysql:host={$config['db']['hostname']};";
 $db.= "dbname={$config['db']['database']};charset=utf8";
@@ -112,10 +132,14 @@ $plugins = [
 	"CompressExpressionValues"      => true
 ];
 
-$css_min = CssMin::minify($css, $filters, $plugins);
+if(isset($_GET['nocache']) && !isset($_GET['skip-min'])) {
+	$css_min = CssMin::minify($css, $filters, $plugins);
 
-file_put_contents(__DIR__ . "/static/{$name}.css", $css_min);
-print $css_min;
+	file_put_contents(__DIR__ . "/static/{$name}.css", $css_min);
+	print $css_min;
+} else {
+	print $css;
+}
 
 if(!empty($world)) {
 	require __DIR__ . "/event/pensal_addon.php";

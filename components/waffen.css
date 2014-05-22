@@ -13,7 +13,7 @@
 #listrow_attackw b, #listrow_defensew b { display: inline-block; position: absolute; right: 0;
     top: 2px; font-size: 0; }
 
-#listrow_attackw a:after, #listrow_defensew a:after { display: inline-block; font-size: 12px; }
+#listrow_attackw a:after, #listrow_defensew a:after { display: inline-block; font-size: 12px; padding-left: 10px; }
 
 #listrow_attackw[title$='1%'] a:after,#listrow_defensew[title$='1%'] a:after{content:'1%'}
 #listrow_attackw[title$='2%'] a:after,#listrow_defensew[title$='2%'] a:after{content:'2%'}

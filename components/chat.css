@@ -33,11 +33,9 @@
 .chattextglobal,
 .submitglobalchat { color: #8f1a8f; }
 
-.chattextglobal b:first-of-type { display: inline-block; }
-.chattextglobal b:first-of-type:before { padding-right: 2px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0c2"; }
 
-.chattextscream b:first-of-type { display: inline-block; }
-.chattextscream b:first-of-type:before { padding-left: 1px; padding-right: 7px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0ac"; }
+.chattextglobal:before { padding-right: 2px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0c2"; }
+.chattextscream:before { padding-left: 1px; padding-right: 7px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0ac"; }
 
 .worldsay,
 .worldsay table,

@@ -7,7 +7,7 @@
 #filterrow b { padding: 0; }
 
 .listitemrow { position: relative; padding: 2px 3px; padding-left: 9px; padding-right: 70px;
-    background: #fafafa; width: calc(100% + 12px); margin: 0 -6px; min-height: 18px; }
+    background: #fafafa; width: calc(100% + 12px); margin: 0 -6px; min-height: 19px; }
 .listitemrow:nth-of-type(2n) { background: #eee; }
 
 .listitemrow ~ form { width: 0; height: 0; margin: 0; padding: 0; }
@@ -41,6 +41,8 @@
 
 .listitemrow a img { display: none; }
 
+.listitemrow a[href^="item.php?action=activate"] { font-size: 0; }
+
 .listitemrow a[href^="item.php?action=activate"]:before { content: "\f10c"; }
 .listitemrow a[href^="item.php?action=watch"]:before { content: "\f06e"; font-size: 12px; }
 .listitemrow a[href^="item.php?action=transfer1"]:before { content: "\f138"; }
@@ -61,6 +63,7 @@
 .listitemrow a[href^="item.php?action=transfer1"]:hover,
 .listitemrow a[href^="item.php?action=manytransfer1"]:hover,
 .listitemrow a[href^="item.php?action=manydrop"]:hover { text-decoration: none; }
+
 /*
  * Item-Komprimierung
  */
@@ -87,6 +90,7 @@
 #listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:before,
 #listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:before,
 #listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:before,
 #listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:before { margin: 0; }
 
 #listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:hover:before,

@@ -9,4 +9,4 @@
 #curenergy { background-image: none !important;
     background-color: #3498db !important; border: 0px solid #000 !important;
     border-radius: 0 0 0 3px; overflow: hidden; height: 13px !important; }
-#phasetext { color: #eee; padding: 1px 0; height: 13px !important; width: 100% !important; }
+#phasetext { color: #eee; padding: 0; line-height: 13px; height: 13px !important; width: 100% !important; }

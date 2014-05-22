@@ -7,7 +7,8 @@ html[id^="ChatFrameChattext"] { position: relative; overflow-y: scroll; height: 
 html[id^="MainFrame"] { padding: 10px; }
 #ChatFrameChattext { padding: 6px; background-color: #eee; }
 #ChatFrameChatform { background: #fafafa url(i/noise_gray.png); }
-html[id^="ItemFrame"] { padding: 6px; }
+html[id^="ItemFrame"] { padding: 6px; overflow-x: hidden; }
+.frameitembg p, .frameitembg td { line-height: 1.1; }
 
 html[id^="MapFrame"] { position: relative; height: 295px; }
 
