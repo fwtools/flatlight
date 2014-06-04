@@ -36,5 +36,8 @@ $addon = function() use ($addon_helper, $config, $db) {
 
 	$css.= '.frameitembg select[name="z_pos_id"] option[value="290"] { font-weight: bold; }';
 
+	$css.= 'a[href="main.php?arrive_eval=getmission"], a[href="main.php?finish=1"] { display: block; width: 200px; height: 40px; padding: 10px; margin: 10px 0; border: 1px solid rgba(0,0,0,.2); text-align: center; color: #fff; font-size: bigger; background: #27ae60; }';
+	$css.= 'a[href="main.php?arrive_eval=getmission"]:hover, a[href="main.php?finish=1"]:hover { color: #fff; background: #2ecc71; }';
+
 	return $css;
 };

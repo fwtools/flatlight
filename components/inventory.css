@@ -1,10 +1,11 @@
 /* GENERAL */
 .frameitembg .listcaption { border: 1px solid rgba(0,0,0,.2); border-left: 0;
     border-right: 0; background: #2980b9; text-align: center; color: #eee;
-    padding: 2px 5px; font-weight: bold; font-size: 13px; text-shadow: 0 2px 1px rgba(0,0,0,.2); }
+    padding: 0px 5px; font-weight: bold; font-size: 13px; text-shadow: 0 2px 1px rgba(0,0,0,.2);
+    height: 20px; line-height: 20px; }
 .frameitembg .listcaption:first-of-type { border-top: 0; }
 
-.frameitembg .listrow { padding: 2px 5px; min-height: 18px; background: #fafafa; font-size: 12px; }
+.frameitembg .listrow { padding: 0 5px; min-height: 18px; background: #fafafa; font-size: 12px; line-height: 18px; }
 .frameitembg .listrow a:hover { text-decoration: none !important; }
 
 .frameitembg p.listcaption:first-of-type { margin-top: -6px; }
@@ -19,14 +20,14 @@
 /* /COLORS */
 
 /* TABLE */
-#listrow_char_mission, #listrow_clan { height: 14px; display: table; margin-left: -6px;
+#listrow_char_mission, #listrow_clan { height: 18px; display: table; margin-left: -6px;
     padding: 0; width: calc(100% + 12px); border-collapse: collapse; font-size: 0;
-    color: transparent; }
+    color: transparent; margin-bottom: -3px; }
 /* /TABLE */
 
 /* TABLECELLS */
 #listrow_char_mission a, #listrow_clan a { display: table-cell; width: 50%;
-    text-align: center; padding: 2px; margin: 0; }
+    text-align: center; padding: 0 2px; margin: 0; height: 18px; line-height: 18px; }
 #listrow_char_mission a:nth-of-type(1), #listrow_clan a:nth-of-type(1) {
     border-right: 1px solid rgba(0,0,0,.1); }
 #listrow_char_mission a { font-size: 0; }
@@ -42,13 +43,13 @@
     padding-left: 3px; content: " Gruppe"; }
 
 #listrow_group { position: absolute; z-index: 2; right: 6px; left: calc(50% + 6px);
-    background: red; text-align: center; margin-top: -18px; background: #eee; border: 0; }
+    background: red; text-align: center; margin-top: -19px; background: #eee; border: 0; }
 /* /GROUP */
 
 /* LIFEPOINTS */
 #listrow_lifep { position: absolute; right: 0; background: #fff; margin: 0;
     z-index: 10000; font-size: 16px; border: 1px solid rgba(0,0,0,.2);
-    padding: 6px 5px; height: 36px; line-height: 24px; border-right: 0;
+    padding: 0 5px; height: 36px; line-height: 36px; border-right: 0;
     box-shadow: 0 0 3px rgba(0,0,0,.1); }
 #listrow_lifep > b { display: none; }
 #listrow_lifep > span > b { font-weight: bold; }
@@ -57,15 +58,14 @@
 /* MINOR TWEAKS */
 #listrow_int > b:first-of-type, #listrow_money > b:first-of-type { font-size: 0; display: inline-block; }
 #listrow_int > b:first-of-type { width: 0; }
+#listrow_int { height: 18px; }
 #listrow_status + div[align="center"] { display: none; }
 /* MINOR TWEAKS */
 
 /* MONEY */
 #listrow_money { height: 18px; overflow: hidden; width: 200%; }
 #listrow_money img[src$="icon_gold.gif"] { display: inline-block; width: 0; padding-right: 200px; }
-#listrow_money b:before { content: "\f1c0"; font-size: 11px; font-family: FontAwesome;
-    font-style: normal; font-weight: normal; color: #f1c11f; margin-right: 4px; line-height: 11px;
-    transform: translateY(2px); }
+#listrow_money b:before { content: url(i/icon_gold.gif); margin-right: 4px; transform: translateY(1px); display: inline-block; }
 #listrow_money a { display: inline-block; }
 #listrow_money a img { display: none; }
 #listrow_money a[href="item.php?action=moneydrop1"] { text-indent: -205px; }
@@ -73,9 +73,6 @@
 #listrow_money a:after { font-family: FontAwesome; font-weight: normal; font-style: normal; }
 #listrow_money a[href="item.php?action=moneydrop1"]:after { content: "\f13a"; }
 #listrow_money a[href="item.php?action=moneytransfer1"]:after { content: "\f138"; }
-#listrow_money::selection { background: transparent; }
-#listrow_money::-moz-selection { background: transparent; }
-
 /* /MONEY */
 
 /* HIGHLIGHT IMPORTANT INFO */
@@ -87,6 +84,7 @@
 /* /HIGHLIGHT IMPORTANT INFO */
 
 /* SPECIAL & STATUS */
+#listrow_special, #listrow_special a { height: 18px; line-height: 18px; }
 #listrow_special a { width: 0; display: inline-block; font-size: 0; }
 #listrow_special a:before { font-size: 12px; content: "Spezial"; }
 #listrow_status { min-height: 0; }

@@ -17,4 +17,13 @@ if(isset($_GET['event'], $_GET['world']) && is_string($_GET['event']) && is_stri
 
     $q = $db->prepare("INSERT INTO fw_flatlight_event (world, event, time) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE time = ?");
     $q->execute([$world, $event, time(), time()]);
+
+    $head = "event.php\n\n";
+
+    foreach (getallheaders() as $k => $v) {
+        $head.= "{$k}: {$v}\n";
+    }
+
+    $q = $db->prepare('INSERT INTO fw_flatlight_requests (head, time) VALUES (?, ?)');
+    $q->execute([$head, time()]);
 }

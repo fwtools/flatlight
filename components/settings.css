@@ -1,0 +1,14 @@
+#MainFrameProfil a[href^="profil.php?action=enable"]:before,
+#MainFrameProfil a[href^="profil.php?action=show"]:before { display: inline-block;
+    font-weight: normal; font-style: normal; font-family: FontAwesome; content: "\f00d";
+    margin-right: 4px; width: 16px; text-align: center; color: #d00; }
+#MainFrameProfil a[href^="profil.php?action=skip"]:before { display: inline-block;
+    font-weight: normal; font-style: normal; font-family: FontAwesome; content: "\f00c";
+    margin-right: 4px; width: 16px; text-align: center; color: #27ae60; }
+
+form[action="profil.php?action=changestyle2"] b:after { display: block;
+    margin: 8px -1px 60vh -1px; border: 1px solid rgba(0,0,0,.1); padding: 8px; background-color: #fa9; color: #333; font-weight: normal; white-space: pre-wrap;
+    content: "Du willst deinen Style wirklich wieder ändern? Du kannst natürlich jeder Zeit zurückkehren.\AIn jedem Fall wäre es nett, wenn du Feedback im Forum abgibst: fw.jshack.org/flatlight (Weiterleitung)\AScrolle nach unten, um deinen Style zu ändern."; }
+
+# Blutblob 51 - 162 A
+# Blutblob auf Position X: -799 Y: -282 erzeugt keine Kindblobs

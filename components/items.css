@@ -100,10 +100,13 @@
 #listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:hover:before { color: #2980b9; }
 
 /* ZAUBERKUGELINDIKATOR */
-.listitemrow[id^="itemarea"], #itemunusedzk { min-height: 45px; position: relative; white-space: normal; padding: 5px; }
+.listitemrow[id^="itemarea"], #itemunusedzk { background-color: #eee; min-height: 45px;
+    position: relative; white-space: normal; padding: 5px; }
+
+.listitemrow[id^="itemarea"]:nth-of-type(2n) { background-color: #fafafa; }
 
 b + br + .listitemrow[id^="itemarea"],
-b + br + #itemunusedzk { margin-top: 8px; border-top: 1px solid #eee; }
+b + br + #itemunusedzk { margin-top: 8px; }
 
 .listitemrow[id^="itemarea"] .areaimg,
 #itemunusedzk .areaimg { position: absolute; right: 5px; bottom: 5px; }
@@ -130,4 +133,9 @@ b + br + #itemunusedzk { margin-top: 8px; border-top: 1px solid #eee; }
 #itemunusedzk a[href^="item.php?action=activate"]:before { margin: 0 2px; content: "\f10c"; }
 .listitemrow[id^="itemarea"] a[href^="item.php?action=activate"]:hover:before,
 #itemunusedzk a[href^="item.php?action=activate"]:hover:before { color: #2980b9; }
+
+.listitemrow[id^="itemarea"] .timeday { color: #27ae60; }
+.listitemrow[id^="itemarea"] .timehour { color: #f39c12; }
+.listitemrow[id^="itemarea"] .timemin,
+.listitemrow[id^="itemarea"] .timesec { color: #c0392b; }
 /* /ZAUBERKUGELINDIKATOR */

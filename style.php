@@ -4,6 +4,7 @@ error_reporting(0);
 header("Content-type: text/css; charset=utf-8");
 
 require __DIR__ . "/functions.php";
+require_once __DIR__ . "/../../../config.php";
 
 $addons_available = ['agg', 'at', 'msf', 'ppf'];
 $addons_enabled = [];
@@ -44,7 +45,6 @@ if(!in_array($world, ['de1', 'de2', 'de3', 'de4', 'de5', 'de6', 'de7', 'de8', 'd
 
 print "@import url('event/style.php?world={$world}');";
 
-require_once __DIR__ . "/../../../config.php";
 $world_by_ref = getWorldByReferer();
 
 if($world_by_ref != $world) {
@@ -89,9 +89,11 @@ if(file_exists(__DIR__ . "/static/{$name}.css") && !isset($_GET['nocache'])) {
 
 require_once __DIR__ . "/lib/cssmin-v3.0.1-minified.php";
 
-$db = "mysql:host={$config['db']['hostname']};";
-$db.= "dbname={$config['db']['database']};charset=utf8";
-$db = new PDO($db, $config['db']['username'], $config['db']['password']);
+if(!isset($db)) {
+	$db = "mysql:host={$config['db']['hostname']};";
+	$db.= "dbname={$config['db']['database']};charset=utf8";
+	$db = new PDO($db, $config['db']['username'], $config['db']['password']);
+}
 
 $css = file_get_contents(__DIR__ . "/style.css");
 
@@ -132,7 +134,7 @@ $plugins = [
 	"CompressExpressionValues"      => true
 ];
 
-if(isset($_GET['nocache']) && !isset($_GET['skip-min'])) {
+if(!isset($_GET['nocache'])) {
 	$css_min = CssMin::minify($css, $filters, $plugins);
 
 	file_put_contents(__DIR__ . "/static/{$name}.css", $css_min);

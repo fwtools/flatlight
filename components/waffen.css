@@ -3,7 +3,7 @@
 #listrow_attackp .valueincreased:after { display: inline-block; width: 200px; content: ""; }
 
 #listrow_attackw, #listrow_defensew { display: inline-block; float: right; font-size: 0;
-    margin-right: 3px; margin-top: -18px; height: 18px; line-height: 12px; position: relative;
+    margin-right: 3px; margin-top: -18px; height: 18px; line-height: 16px; position: relative;
     background: #fafafa; transition: width 250ms, color 250ms, font-size 250ms; color: #eee; width: 30px; overflow-y: hidden; }
 #listrow_defensew { background: #eee; }
 
@@ -11,7 +11,7 @@
     width: calc(100% + 2px); font-size: 12px; color: #222; }
 
 #listrow_attackw b, #listrow_defensew b { display: inline-block; position: absolute; right: 0;
-    top: 2px; font-size: 0; }
+    top: 0; font-size: 0; }
 
 #listrow_attackw a:after, #listrow_defensew a:after { display: inline-block; font-size: 12px; padding-left: 10px; }
 
