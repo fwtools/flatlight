@@ -33,6 +33,7 @@ $addon = function() use ($addon_helper, $config, $db) {
 	$css.= $addon_helper('Blattalisk',        'Blattalisk');
 	$css.= $addon_helper('Untoter Bürger',    'Bürger');
 	$css.= $addon_helper('temporaler Falter', 'Falter');
+	$css.= $addon_helper('Koloa-Käfer',       'Käfer');
 
 	$css.= '.frameitembg select[name="z_pos_id"] option[value="290"] { font-weight: bold; }';
 
