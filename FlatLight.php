@@ -3,15 +3,16 @@
 namespace FlatLight;
 
 use \Arya\Request as Request;
+use \Arya\Response as Response;
 
 class FlatLight {
-	public function main(Request $request) {
+	public function main(Request $request, Response $response) {
 		$css = file_get_contents(__DIR__ . '/style.css');
 
 		foreach(glob(__DIR__ . '/modules/*.css') as $filename) {
 			$css.= file_get_contents($filename);
 		}
 
-		return $css;
+		return $response->setBody($response->getBody() . $css);
 	}
 }
