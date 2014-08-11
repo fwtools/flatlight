@@ -14,6 +14,6 @@ class FlatLight {
 		}
 
 		$body = $response->getBody();
-		return $response->setBody((empty($body) ? $body : "") . $css);
+		return $response->setBody((empty($body) ? $body : "") . $css . "html { margin: 0; }");
 	}
 }
