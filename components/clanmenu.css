@@ -1,4 +1,0 @@
-#ItemFrameClanmenu .listrow[title]:after {
-    content: attr(title);
-    display: block;
-}
