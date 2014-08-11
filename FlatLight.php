@@ -14,8 +14,8 @@ class FlatLight {
 		}
 
 		$body = $response->getBody();
-		$return = $response->setBody((empty($body) ? $body : "") . $css);
-		var_dump($return);
-		return $return;
+		$response->setBody((empty($body) ? $body : "") . $css);
+		
+		return $response;
 	}
 }
