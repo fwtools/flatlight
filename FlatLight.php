@@ -6,6 +6,10 @@ use \Arya\Request as Request;
 use \Arya\Response as Response;
 
 class FlatLight {
+	public function __construct() {
+
+	}
+	
 	public function main(Request $request, Response $response) {
 		$css = file_get_contents(__DIR__ . '/style.css');
 
