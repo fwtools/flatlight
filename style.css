@@ -378,9 +378,14 @@ a[href="main.php?action=archive&mode=show#newest_msg"] ~ p.maincaption2 {
 /* Unterkünfte */
 
 /* > Schwarze Felder "sichtbar" machen */
-td[style*="/map/black.jpg"] a:not(.nocango),
-td[style*="/map/u/Einzelbilder/002.jpg"] a,
-td[style*="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; background-image:url(i/uk.png) !important; }
+td[style$="/map/black.jpg"] a:not(.nocango),
+td[style$="/map/u/Einzelbilder/002.jpg"] a,
+td[style$="/map/ixi19.jpg"] a { width: 50px; height: 50px; display: block; background-image:url(i/uk.png) !important; }
+
+/* Übersichtskarte */
+img[style$="/map/black.jpg"] + div:after,
+img[style$="/map/u/Einzelbilder/002.jpg"] + div:after,
+img[style$="/map/ixi19.jpg"] + div:after { width: 25px; height: 25px; display: block; background-image: url(i/uk.png) !important; position: absolute; left: 0; top: 0; }
 
 /* > Bau-Menü */
 .builtcaption,

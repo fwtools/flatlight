@@ -16,4 +16,16 @@ class FlatLight {
 		$body = $response->getBody();
 		$response->setBody((empty($body) ? $body : "") . $css);
 	}
+
+	public function image(Request $request, Response $response, $name, $extension) {
+		$response->setHeader('Content-Type', 'image/' . $extension);
+
+		$file = __DIR__ . '/i/' . $name . '.' . $extension;
+		
+		if(file_exists($file)) {
+			$response->setBody(file_get_contents($file));
+		} else {
+			return ['status' => 404];
+		}
+	}
 }
