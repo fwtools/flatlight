@@ -1,0 +1,37 @@
+#fastspell { margin: 4px -6px; margin-bottom: 0; border: 1px solid rgba(0,0,0,.2); border-left: 0;
+    border-right: 0; background: #2980b9; text-align: center; color: #eee;
+    padding: 0 5px; font-weight: bold; width: calc(100% + 12px);
+    font-size: 13px; height: 20px; line-height: 20px; text-shadow: 0 2px 1px rgba(0,0,0,.2); }
+#fastspell td { color: #eee; font-size: 13px; }
+
+#fastspell tr > td + td > b { color: transparent; font-size: 0; }
+a.fast_spell_set, span.fast_spell_set { margin-left: 3px; margin-right: 3px;
+    display: inline-block; text-decoration: none; border-radius: 50%;
+    width: 16px; height: 16px; background: #3498db; text-align: center;
+    font-size: 11px; line-height: 16px; }
+
+span.fast_spell_set { background: #fff; color: #333; }
+a.fast_spell_set { color: #eee; }
+a.fast_spell_set:hover, a.fast_spell_set:focus { color: #fff; text-decoration: none; }
+
+table[id^="fastspell"]:not(#fastspell) { height: 18px; margin: 0 -6px; padding: 2px 5px; width: calc(100% + 12px); background-color: #fafafa; }
+table[id^="fastspell"]:not(#fastspell):nth-of-type(2n) { background-color: #eee; }
+
+table[id^="fastspell"] + .small { display: block; padding: 1px 1px; background-color: #ddd;
+    font-size: 12px; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
+
+table[id^="fastspell"]:not(#fastspell):last-of-type + .small a { color: #666; text-decoration: none; font-weight: bold; }
+table[id^="fastspell"]:not(#fastspell):last-of-type + .small a:hover { color: #444; }
+table[id^="fastspell"]:not(#fastspell):last-of-type + .small br { display: none; }
+table[id^="fastspell"]:not(#fastspell):last-of-type + .small:empty { display: none; }
+
+table[id^="fastspell"]:not(#fastspell) td { font-size: 12px; color: #666; }
+table[id^="fastspell"]:not(#fastspell) a { font-size: 12px; color: #555; text-decoration: none; }
+table[id^="fastspell"]:not(#fastspell) a:hover { color: #111; }
+
+.fastitemamount { color: #08f !important; }
+
+table[id^="fastspell"]:not(#fastspell) img[src$="close.gif"],
+#close1 img[src$="close.gif"], #close2 img[src$="close.gif"] {
+    display: inline-block; width: 0px; height: 10px; background: url(i/rcsmall.png);
+    background-repeat: no-repeat; margin-top: 2px; padding-left: 10px; overflow: hidden; }

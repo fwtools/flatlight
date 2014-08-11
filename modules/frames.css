@@ -1,0 +1,24 @@
+.framemenubg { font-size: 11px; }
+
+html[id^="MainFrame"],
+html[id^="ItemFrame"],
+html[id^="ChatFrameChattext"] { position: relative; overflow-y: scroll; height: 100%; }
+
+html[id^="MainFrame"] { padding: 10px; }
+#ChatFrameChattext { padding: 6px; background-color: #eee; }
+#ChatFrameChatform { background: #fafafa url(i/noise_gray.png); }
+html[id^="ItemFrame"] { padding: 6px; overflow-x: hidden; }
+.frameitembg p, .frameitembg td { line-height: 1.1; }
+
+html[id^="MapFrame"] { position: relative; height: 295px; }
+
+.framebannerbg { background: #eee; }
+.framebannerbg > * { border-bottom: 6px solid #2980b9 !important; }
+
+.framemenubg { height: 65px; }
+html[id^="ItemFrame"], html[id^="MapFrame"], .framemenubg { border-left: 1px solid #aaa; }
+html[id^="ItemFrame"]:before { position: fixed; left: 0; top: 0; bottom: 0; width: 1px; background: #aaa; content: ""; }
+
+.frameitembg { font-size: 12px; }
+
+#MapFrameID2 { padding: 8px; }

@@ -1,0 +1,42 @@
+table.areadescription { margin: -10px -10px 2px -10px; border-collapse: separate; width: calc(100% + 20px); padding: 0; }
+
+table.areadescription .imageborder { padding: 3px;
+    background-color: #fafafa; width: 46px; height: 46px;
+    position: absolute; left: 4px; top: 4px; }
+
+table.areadescription .mainheader { padding-left: 70px; padding-top: 7px;
+    padding-bottom: 7px; font-size: 22px; background-color: #2980b9; color: #eee;
+    border-bottom: 1px solid rgba(0,0,0,.2); text-shadow: 1px 1px 5px #888; }
+
+table.areadescription .areadescription { padding: 11px;
+    background: #fafafa; border-bottom: 1px solid rgba(0,0,0,.1); }
+table.areadescription tr:nth-of-type(2) .areadescription { background: #fafafa url(i/noise.png) left top repeat-x; }
+
+/* Personen & NPCs & Items */
+.listusersrow, .listplaceitemsrow { padding: 3px 8px; border: 1px solid #ccc; border-bottom: 0 solid transparent;
+    font-size: 12px; margin: 0; height: auto; min-height: 0; background: #fafafa;
+    box-shadow: 0 3px 3px -3px rgba(0,0,0,.2); }
+.listusersrow td, .listplaceitemrow td { font-size: 12px; }
+.listusersrow { clear: both; }
+.personlistcaption + .listusersrow,
+.listplaceitemsrow:first-of-type { margin-top: 10px; }
+.listusersrow:last-of-type, .listplaceitemsrow:last-of-type { border-bottom: 1px solid #ccc; }
+.listplaceitemsrow { padding: 5px 10px; }
+.listusersrow > img, .listplaceitemsrow img { width: 24px; height: 24px; margin: 3px 8px 3px 3px; }
+.listplaceitemsrow i { display: inline-block; padding: 0 3px; }
+
+.fastattack { color: #2980b9 !important; font-size: 15px; }
+.fastattack:hover { color: #3498db !important; }
+
+.listplaceitemsrow a, .listplaceitemsrow b { font-size: 13px; }
+.listplaceitemsrow i { font-style: normal; }
+
+.aggressivenpc { color: #d00; display: inline-block; padding-right: 3px; }
+.aggressivenpc:before { font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f071"; padding-left: 4px; padding-right: 2px; }
+
+#captchaHolder { box-sizing: content-box; margin: 0 auto; border: 1px solid #ccc !important; box-shadow: 0 0 4px rgba(0,0,0,.3); }
+
+/* PORTALE */
+.listusersrow>b+br+br+img~a~br,.listusersrow>b+br+br~br+br+br+br{display:none;}
+.listusersrow>b+br+br+img { width: 50px; height: 50px; }
+/* /PORTALE */

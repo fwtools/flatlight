@@ -1,0 +1,4 @@
+.abilitymenu { border-spacing: 0px; border-collapse: collapse; width: calc(100% + 12px); margin: 0 -6px; }
+
+.abilitymenu td { border: 1px solid #ddd; background: #fafafa; color: #333; padding: 2px 5px; }
+.abilitymenu tr:nth-of-type(2n) td { background: #eee; }

@@ -1,0 +1,12 @@
+#phasespacer { display: inline-block; height: 0; }
+#phasespacer br { display: none; }
+#phasespacer + center { background: rgba(255,255,255,.5); border: 0; }
+#phasespacer + center + div { margin: 0 !important; }
+#phasedisp { margin-left: -6px; width: calc(100% + 12px) !important; height: 13px !important; }
+#fullenergydisp { background-image: none !important; overflow: hidden;
+    background-color: #2980b9 !important; border: 0px solid #000 !important;
+    width: 100% !important; height: 13px !important; }
+#curenergy { background-image: none !important;
+    background-color: #3498db !important; border: 0px solid #000 !important;
+    border-radius: 0 0 0 3px; overflow: hidden; height: 13px !important; }
+#phasetext { color: #eee; padding: 0; line-height: 13px; height: 13px !important; width: 100% !important; }

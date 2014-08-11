@@ -1,0 +1,141 @@
+#listrow_int ~ .listcaption { margin-top: 4px; }
+#listrow_int ~ .listcaption a { color: #eee; }
+#listrow_int ~ .listcaption a:hover,
+#listrow_int ~ .listcaption a:focus { color: #fff; }
+
+#filterrow { padding: 3px; background: #ddd; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
+#filterrow b { padding: 0; }
+
+.listitemrow { position: relative; padding: 2px 3px; padding-left: 9px; padding-right: 70px;
+    background: #fafafa; width: calc(100% + 12px); margin: 0 -6px; min-height: 19px; }
+.listitemrow:nth-of-type(2n) { background: #eee; }
+
+.listitemrow ~ form { width: 0; height: 0; margin: 0; padding: 0; }
+
+.listitemrow * { z-index: 2; }
+
+#listrow_int ~ .listitemrow br {
+    display: none;
+}
+
+.listitemrow .itemequipped,
+.listitemrow .itemmagic,
+.listitemrow .itemamount {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 11px;
+    color: #27ae60;
+}
+
+.listitemrow .itemamount { padding-right: 2px; }
+
+.itemmagic { color: #27ae60; }
+
+.listitemrow .itemmagic { width: 0; font-size: 0; color: transparent; }
+.listitemrow .itemmagic:before {
+    content: ""; display: block; position: absolute; width: auto;
+    top: 0; left: 1px; bottom: 0; width: 4px;
+}
+.listitemrow .itemmagic:before             { background: #bb7857; }
+.listitemrow .itemmagic.magicextend:before { background: #83bb57; }
+
+.listitemrow a img { display: none; }
+
+.listitemrow a[href^="item.php?action=activate"] { font-size: 0; }
+
+.listitemrow a[href^="item.php?action=activate"]:before { content: "\f10c"; }
+.listitemrow a[href^="item.php?action=watch"]:before { content: "\f06e"; font-size: 12px; }
+.listitemrow a[href^="item.php?action=transfer1"]:before { content: "\f138"; }
+.listitemrow a[href^="item.php?action=manytransfer1"]:before { content: "\f138"; }
+.listitemrow a[href^="item.php?action=manydrop"]:before { content: "\f13a"; }
+
+.listitemrow a[href^="item.php?action=activate"]:before,
+.listitemrow a[href^="item.php?action=watch"]:before,
+.listitemrow a[href^="item.php?action=transfer1"]:before,
+.listitemrow a[href^="item.php?action=manytransfer1"]:before,
+.listitemrow a[href^="item.php?action=manydrop"]:before { margin: 0 3px; display: inline-block; color: #666; font-size: 14px;
+    font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; }
+
+.listitemrow a[href^="item.php?action=watch"]:before { font-size: 13px; transform: translateY(-1px); }
+
+.listitemrow a[href^="item.php?action=activate"]:hover,
+.listitemrow a[href^="item.php?action=watch"]:hover,
+.listitemrow a[href^="item.php?action=transfer1"]:hover,
+.listitemrow a[href^="item.php?action=manytransfer1"]:hover,
+.listitemrow a[href^="item.php?action=manydrop"]:hover { text-decoration: none; }
+
+/*
+ * Item-Komprimierung
+ */
+
+#listrow_int ~ .listitemrow,
+#listrow_int ~ .listitemrow br ~ a,
+#listrow_int ~ .listitemrow br ~ a:hover { display: block; font-size: 0; color: transparent; }
+#listrow_int ~ .listitemrow b { word-break: break-word; }
+#listrow_int ~ .listitemrow b { font-size: 12px; color: #333; }
+
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"],
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"] { width: 16px; height: 16px;
+    position: absolute; top: 3px; z-index: 3; }
+
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"] { right: 49px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"] { right: 33px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"] { right: 17px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"] { right: 17px; }
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"] { right: 1px; }
+
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:before { margin: 0; }
+
+#listrow_int ~ .listitemrow a[href^="item.php?action=watch"]:hover:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=transfer1"]:hover:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manytransfer1"]:hover:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=manydrop"]:hover:before,
+#listrow_int ~ .listitemrow a[href^="item.php?action=activate"]:hover:before { color: #2980b9; }
+
+/* ZAUBERKUGELINDIKATOR */
+.listitemrow[id^="itemarea"], #itemunusedzk { background-color: #eee; min-height: 45px;
+    position: relative; white-space: normal; padding: 5px; }
+
+.listitemrow[id^="itemarea"]:nth-of-type(2n) { background-color: #fafafa; }
+
+b + br + .listitemrow[id^="itemarea"],
+b + br + #itemunusedzk { margin-top: 8px; }
+
+.listitemrow[id^="itemarea"] .areaimg,
+#itemunusedzk .areaimg { position: absolute; right: 5px; bottom: 5px; }
+
+.listitemrow[id^="itemarea"] .itemarea + br,
+#itemunusedzk .itemarea + br { display: none; }
+
+.listitemrow[id^="itemarea"] .medium,
+#itemunusedzk .medium { display: inline-block; margin-bottom: 8px; }
+
+.listitemrow[id^="itemarea"] a:before,
+#itemunusedzk a:before { font-size: 12px; }
+
+.listitemrow[id^="itemarea"] a[href^="item.php?action=activate"]:before,
+#itemunusedzk a[href^="item.php?action=activate"]:before { color: #666; font-size: 15px;
+    font-family: FontAwesome; font-style: normal; font-weight: normal; line-height: 1; }
+
+.listitemrow[id^="itemarea"] a[href^="item.php?action=activate"],
+.listitemrow[id^="itemarea"] a[href^="item.php?action=activate"]:hover,
+#itemunusedzk a[href^="item.php?action=activate"],
+#itemunusedzk a[href^="item.php?action=activate"]:hover { transform: translateY(1px); display: inline-block; font-size: 0; margin: 0 3px; text-decoration: none; width: 16px; height: 16px; }
+
+.listitemrow[id^="itemarea"] a[href^="item.php?action=activate"]:before,
+#itemunusedzk a[href^="item.php?action=activate"]:before { margin: 0 2px; content: "\f10c"; }
+.listitemrow[id^="itemarea"] a[href^="item.php?action=activate"]:hover:before,
+#itemunusedzk a[href^="item.php?action=activate"]:hover:before { color: #2980b9; }
+
+.listitemrow[id^="itemarea"] .timeday { color: #27ae60; }
+.listitemrow[id^="itemarea"] .timehour { color: #f39c12; }
+.listitemrow[id^="itemarea"] .timemin,
+.listitemrow[id^="itemarea"] .timesec { color: #c0392b; }
+/* /ZAUBERKUGELINDIKATOR */
