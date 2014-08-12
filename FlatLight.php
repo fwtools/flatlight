@@ -21,7 +21,7 @@ class FlatLight {
 		$response->setHeader('Content-Type', 'image/' . $extension);
 		$file = __DIR__ . '/i/' . $name . '.' . $extension;
 
-		if(file_exists($file)) {
+		if (file_exists($file)) {
 			$response->setBody(file_get_contents($file));
 		} else {
 			return ['status' => 404];
