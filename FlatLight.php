@@ -19,9 +19,8 @@ class FlatLight {
 
 	public function image(Request $request, Response $response, $name, $extension) {
 		$response->setHeader('Content-Type', 'image/' . $extension);
-
 		$file = __DIR__ . '/i/' . $name . '.' . $extension;
-		
+
 		if(file_exists($file)) {
 			$response->setBody(file_get_contents($file));
 		} else {
