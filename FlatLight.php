@@ -30,7 +30,6 @@ class FlatLight {
 
 	public function event(Request $request) {
 		$response = new Response;
-		$response->setHeader('')
 
 		$q = $this->db->prepare("SELECT time FROM style_event WHERE event = 'pensal-available' && world = ?");
 		$q->execute([$world]);
