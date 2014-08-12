@@ -8,3 +8,5 @@
 # generated files
 /static
 /track/static
+
+*.orig

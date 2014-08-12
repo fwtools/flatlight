@@ -14,7 +14,7 @@ class FlatLight {
 		}
 
 		$body = $response->getBody();
-		$response->setBody((empty($body) ? $body : "") . $css);
+		$response->setBody($body . $css);
 	}
 
 	public function image(Request $request, Response $response, $name, $extension) {
@@ -26,5 +26,38 @@ class FlatLight {
 		} else {
 			return ['status' => 404];
 		}
+	}
+
+	public function event(Request $request) {
+		$response = new Response;
+		$response->setHeader('')
+
+		$q = $this->db->prepare("SELECT time FROM style_event WHERE event = 'pensal-available' && world = ?");
+		$q->execute([$world]);
+
+		if($row = $q->fetch(PDO::FETCH_OBJ)) {
+			$eventMin = (int) date('i', $row->time);
+			$currMin = (int) date('i');
+
+			$eventDiff = $eventMin - $eventMin % 30;
+			$currDiff = $currMin - $currMin % 30;
+
+			if($row->time > time() - 30 * 60 && $eventDiff == $currDiff) {
+				$response->setHeader('Content-Type', 'text/css; charset=utf-8');
+
+				$exp_gmt = gmdate("D, d M Y H:i:s", time() + 60 - time() % 60) ." GMT";
+				$mod_gmt = gmdate("D, d M Y H:i:s", time()) ." GMT";
+
+				$response->setHeader('Expires', $exp_gmt);
+				$response->setHeader('Last-Modified', $mod_gmt);
+				$response->setHeader('Cache-Control', 'private, max-age=' . (60 - time() % 60));
+				$response->addHeader('Cache-Control', 'post-check=' . (60 - time() % 60));
+
+				$response->setBody('.positiontext:after{content:"\f134"}');
+				return $response;
+			}
+		}
+
+		return '';
 	}
 }
