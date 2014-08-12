@@ -6,6 +6,12 @@ use \Arya\Request as Request;
 use \Arya\Response as Response;
 
 class FlatLight {
+	private $db;
+
+	public function __construct(\PDO $db) {
+		$this->db = $db;
+	}
+
 	public function main(Request $request, Response $response) {
 		$css = file_get_contents(__DIR__ . '/style.css');
 
