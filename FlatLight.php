@@ -37,10 +37,21 @@ class FlatLight {
 	public function event(Request $request) {
 		$response = new Response;
 
+		$world = $request->getStringQueryParameter('world');
+
+		$worlds = [
+			'de1', 'de2', 'de3', 'de4', 'de5', 'de6', 'de7', 'de8', 'de9',
+			'de10', 'de11', 'de12', 'de13', 'de14', 'af', 'rp'
+		];
+
+		if(!in_array($world, $worlds)) {
+			return '/* unknown world */';
+		}
+
 		$q = $this->db->prepare("SELECT time FROM style_event WHERE event = 'pensal-available' && world = ?");
 		$q->execute([$world]);
 
-		if($row = $q->fetch(PDO::FETCH_OBJ)) {
+		if($row = $q->fetch(\PDO::FETCH_OBJ)) {
 			$eventMin = (int) date('i', $row->time);
 			$currMin = (int) date('i');
 
