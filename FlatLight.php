@@ -14,7 +14,7 @@ class FlatLight {
 		}
 
 		$body = $response->getBody();
-		$response->setBody((empty($body) ? $body : "") . $css);
+		$response->setBody($body . $css);
 	}
 
 	public function image(Request $request, Response $response, $name, $extension) {
