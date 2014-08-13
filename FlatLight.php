@@ -74,6 +74,14 @@ class FlatLight {
 			}
 		}
 
-		return '';
+		$exp_gmt = gmdate("D, d M Y H:i:s", time() + 6) ." GMT";
+		$mod_gmt = gmdate("D, d M Y H:i:s", time()) ." GMT";
+
+		$response->setHeader('Expires', $exp_gmt);
+		$response->setHeader('Last-Modified', $mod_gmt);
+		$response->setHeader('Cache-Control', 'private, max-age=6');
+		$response->addHeader('Cache-Control', 'pre-check=6');
+
+		return $response->setBody('');
 	}
 }
