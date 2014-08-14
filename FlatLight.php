@@ -23,11 +23,19 @@ class FlatLight {
 		$response->setBody($body . $css);
 	}
 
-	public function image(Request $request, Response $response, $name, $extension) {
+	public function image(Request $request, $name, $extension) {
+		$response = new Response;
 		$response->setHeader('Content-Type', 'image/' . $extension);
 		$file = __DIR__ . '/i/' . $name . '.' . $extension;
 
 		if (file_exists($file)) {
+			$exp_gmt = gmdate("D, d M Y H:i:s", time() + 86400) ." GMT";
+			$mod_gmt = gmdate("D, d M Y H:i:s", filemtime($file)) ." GMT";
+
+			$response->setHeader('Expires', $exp_gmt);
+			$response->setHeader('Last-Modified', $mod_gmt);
+			$response->setHeader('Cache-Control', 'private, max-age=86400');
+			$response->addHeader('Cache-Control', 'pre-check=86400');
 			$response->setBody(file_get_contents($file));
 		} else {
 			return ['status' => 404];
