@@ -37,6 +37,8 @@ class FlatLight {
 			$response->setHeader('Cache-Control', 'private, max-age=86400');
 			$response->addHeader('Cache-Control', 'pre-check=86400');
 			$response->setBody(file_get_contents($file));
+
+			return $response;
 		} else {
 			return ['status' => 404];
 		}
