@@ -464,3 +464,21 @@ a[href="main.php?finish=1"] { display: block; width: 200px; height: 40px; paddin
 	border: 1px solid rgba(0,0,0,.2); text-align: center; color: #fff !important; font-size: bigger; background: #27ae60; }
 a[href="main.php?arrive_eval=getmission"]:hover,
 a[href="main.php?finish=1"]:hover { color: #fff !important; background: #2ecc71; }
+
+.framebannerbg:before {
+	position: absolute; white-space: pre;
+	left: 15px; top: -10px; width: 270px; height: 50px;
+	font-size: 11px; display: block;
+	padding: 10px; border: 3px solid #eee; text-overflow: ellipsis;
+	overflow: hidden; visibility: hidden;
+}
+
+/* Werbung */
+.framebannerbg table td:first-of-type {
+	display: none;
+}
+
+.framebannerbg table td:last-of-type {
+	position: absolute;
+	right: 15px; top: 8px;
+}
