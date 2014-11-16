@@ -6,6 +6,7 @@ use \Arya\Request as Request;
 use \Arya\Response as Response;
 
 class FlatLight {
+	private $allowedImageExtensions = ['png', 'gif', 'jpg'];
 	private $db;
 
 	public function __construct(\PDO $db) {
@@ -24,6 +25,10 @@ class FlatLight {
 	}
 
 	public function image(Request $request, $name, $extension) {
+		if(!in_array($this->allowedImageExtensions, $extension)) {
+			return ['status' => 404];
+		}
+
 		$response = new Response;
 		$response->setHeader('Content-Type', 'image/' . $extension);
 		$file = __DIR__ . '/i/' . $name . '.' . $extension;
