@@ -25,7 +25,7 @@ class FlatLight {
 	}
 
 	public function image(Request $request, $name, $extension) {
-		if(!in_array($this->allowedImageExtensions, $extension)) {
+		if(!in_array($extension, $this->allowedImageExtensions)) {
 			return ['status' => 404];
 		}
 
