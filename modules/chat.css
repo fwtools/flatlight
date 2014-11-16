@@ -31,7 +31,7 @@
 .chattextwhisper,
 .submitwhisper { color: #380; }
 .chattextglobal,
-.submitglobalchat { color: #8f1a8f; }
+.submitglobalchat { /* color: #8f1a8f; */ color: #1D8F74; }
 
 
 .chattextglobal:before { padding-right: 2px; font-family: FontAwesome; font-style: normal; font-weight: normal; content: "\f0c2"; }
