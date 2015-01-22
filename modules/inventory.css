@@ -56,20 +56,20 @@
 /* /LIFEPOINTS */
 
 /* MINOR TWEAKS */
-#listrow_int > b:first-of-type, #listrow_money > b:first-of-type { font-size: 0; display: inline-block; }
+#listrow_int > b:first-of-type, #listrow_money > b { display: inline-block; width: 16px; overflow: hidden; }
 #listrow_int > b:first-of-type { width: 0; }
-#listrow_int { height: 18px; }
 #listrow_status + div[align="center"] { display: none; }
-/* MINOR TWEAKS */
+/* /MINOR TWEAKS */
 
 /* MONEY */
-#listrow_money { height: 18px; overflow: hidden; width: 200%; }
-#listrow_money img[src$="icon_gold.gif"] { display: inline-block; width: 0; padding-right: 200px; }
+#listrow_money { white-space: nowrap; overflow: hidden; }
+#listrow_money > b { display: inline-block; width: 16px; overflow: hidden; }
+#listrow_money img[src$="icon_gold.gif"] { display: inline-block; width: 0; margin-right: 100%; }
 #listrow_money b:before { content: url(i/icon_gold.gif); margin-right: 4px; transform: translateY(1px); display: inline-block; }
 #listrow_money a { display: inline-block; }
 #listrow_money a img { display: none; }
-#listrow_money a[href="item.php?action=moneydrop1"] { text-indent: -205px; }
-#listrow_money a[href="item.php?action=moneytransfer1"] { text-indent: -195px; }
+#listrow_money a[href="item.php?action=moneydrop1"] { text-indent: -5px; margin-left: -100%; margin-right: 100%; }
+#listrow_money a[href="item.php?action=moneytransfer1"] { margin-left: -100%; margin-right: 100% }
 #listrow_money a:after { font-family: FontAwesome; font-weight: normal; font-style: normal; }
 #listrow_money a[href="item.php?action=moneydrop1"]:after { content: "\f13a"; }
 #listrow_money a[href="item.php?action=moneytransfer1"]:after { content: "\f138"; }
