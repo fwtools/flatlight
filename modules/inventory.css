@@ -56,7 +56,7 @@
 /* /LIFEPOINTS */
 
 /* MINOR TWEAKS */
-#listrow_int > b:first-of-type, #listrow_money > b { display: inline-block; width: 16px; overflow: hidden; }
+#listrow_int > b:first-of-type, #listrow_money > b { display: inline-block; width: 16px; overflow: hidden; line-height: 0; }
 #listrow_int > b:first-of-type { width: 0; }
 #listrow_status + div[align="center"] { display: none; }
 /* /MINOR TWEAKS */
