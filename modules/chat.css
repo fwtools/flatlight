@@ -16,7 +16,7 @@
 .framechattextbg:after { background-image: url(i/noise.png); background-repeat: repeat-x; background-attachment: fixed;
     background-position: left top; position: fixed; left: 0; right: 0; top: 0; height: 5px; z-index: 1000; content: ""; }
 .framechattextbg p { font-size: 13px; }
-.framechattextbg > *:last-of-type { padding-bottom: 6px; }
+.framechattextbg > :not(div):last-of-type { padding-bottom: 6px; }
 
 /* > Chatcolors */
 .chattext { color: #222; }
