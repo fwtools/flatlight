@@ -52,51 +52,21 @@ class FlatLight {
 	public function event(Request $request) {
 		$response = new Response;
 
-		$world = $request->getStringQueryParameter('world');
-
-		$worlds = [
-			'de1', 'de2', 'de3', 'de4', 'de5', 'de6', 'de7', 'de8', 'de9',
-			'de10', 'de11', 'de12', 'de13', 'de14', 'af', 'rp'
-		];
-
-		if(!in_array($world, $worlds)) {
-			return '/* unknown world */';
-		}
-
-		$q = $this->db->prepare("SELECT time FROM style_event WHERE event = 'pensal-available' && world = ?");
-		$q->execute([$world]);
-
-		if($row = $q->fetch(\PDO::FETCH_OBJ)) {
-			$eventMin = (int) date('i', $row->time);
-			$currMin = (int) date('i');
-
-			$eventDiff = $eventMin - $eventMin % 30;
-			$currDiff = $currMin - $currMin % 30;
-
-			if($row->time > time() - 30 * 60 && $eventDiff == $currDiff) {
-				$response->setHeader('Content-Type', 'text/css; charset=utf-8');
-
-				$exp_gmt = gmdate("D, d M Y H:i:s", time() + 60 - time() % 60) ." GMT";
-				$mod_gmt = gmdate("D, d M Y H:i:s", time()) ." GMT";
-
-				$response->setHeader('Expires', $exp_gmt);
-				$response->setHeader('Last-Modified', $mod_gmt);
-				$response->setHeader('Cache-Control', 'private, max-age=' . (60 - time() % 60));
-				$response->addHeader('Cache-Control', 'post-check=' . (60 - time() % 60));
-
-				$response->setBody('.positiontext:after{content:"\f134"}');
-				return $response;
-			}
-		}
-
-		$exp_gmt = gmdate("D, d M Y H:i:s", time() + 6) ." GMT";
-		$mod_gmt = gmdate("D, d M Y H:i:s", time()) ." GMT";
+		$exp_gmt = gmdate("D, d M Y H:i:s", time() - time() % 1800 + 1800) ." GMT";
+		$mod_gmt = gmdate("D, d M Y H:i:s", time() - time() % 1800) ." GMT";
 
 		$response->setHeader('Expires', $exp_gmt);
 		$response->setHeader('Last-Modified', $mod_gmt);
-		$response->setHeader('Cache-Control', 'private, max-age=6');
-		$response->addHeader('Cache-Control', 'pre-check=6');
+		$response->setHeader('Cache-Control', 'private, max-age='.(1800 - time() % 1800));
+		$response->addHeader('Cache-Control', 'pre-check='.(1800 - time() % 1800));
 
-		return $response->setBody('');
+		srand((integer) (time() / 1800) + 1184);
+		if (rand(1, 3) == 1) {
+			return $response->setBody('');
+		} else {
+			$response->setHeader('Content-Type', 'text/css; charset=utf-8');
+			$response->setBody('.positiontext:after{content:"\f134"}');
+			return $response;
+		}
 	}
 }
