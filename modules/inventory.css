@@ -2,7 +2,7 @@
 .frameitembg .listcaption { border: 1px solid rgba(0,0,0,.2); border-left: 0;
     border-right: 0; background: #2980b9; text-align: center; color: #eee;
     padding: 0px 5px; font-weight: bold; font-size: 13px; text-shadow: 0 2px 1px rgba(0,0,0,.2);
-    height: 20px; line-height: 20px; }
+    min-height: 20px; line-height: 20px; }
 .frameitembg .listcaption:first-of-type { border-top: 0; }
 
 .frameitembg .listrow { padding: 0 5px; min-height: 18px; background: #fafafa; font-size: 12px; line-height: 18px; }
