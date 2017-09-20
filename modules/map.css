@@ -1,4 +1,4 @@
-.framemapbg table { border: 1px solid rgba(0,0,0,.2); padding: 3px; width: auto !important; margin-top: 19px; background: #ccc; }
+.framemapbg > table { border: 1px solid rgba(0,0,0,.2); padding: 3px; width: auto !important; margin-top: 19px; background: #ccc; }
 
 .framemapbg img[src*="zahl"] { opacity: .75; }
 
