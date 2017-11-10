@@ -5,6 +5,7 @@
 
 #filterrow { padding: 3px; background: #ddd; text-align: center; width: calc(100% + 12px); margin: 0 -6px; }
 #filterrow b { padding: 0; }
+#searcht { padding: 0 3px; font-size: inherit; }
 
 .listitemrow { position: relative; padding: 2px 3px; padding-left: 9px; padding-right: 70px;
     background: #fafafa; width: calc(100% + 12px); margin: 0 -6px; min-height: 19px; }
