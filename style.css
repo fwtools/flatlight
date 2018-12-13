@@ -179,7 +179,7 @@ a[href^="fight.php?action=groupjoinrand"]:hover { text-decoration: none; }
 .friendlist a[href="#"][onclick*="tt(event,"]:after {
 	content: attr(title);
 	position: absolute;
-	left: 326px;
+	left: 501px;
 	right: 5px;
 	display: inline-block;
 	border: 1px solid #ccc;
@@ -212,7 +212,7 @@ a[href^="fight.php?action=groupjoinrand"]:hover { text-decoration: none; }
 }
 
 .friendlist + br + p + .friendlist a[href="#"][onclick*="tt(event,"]:after {
-	left: 278px;
+	left: 503px;
 }
 
 /* Doppelte brs bei Itembeschreibungen verhindern, z.B Hasenfell */
@@ -232,10 +232,6 @@ a[href^="fight.php?action=groupjoinrand"]:hover { text-decoration: none; }
 	padding: 1px;
 	margin-top: 3px;
 	background: url(i/white.png);
-}
-
-.friendlist tr td[width="200px"] {
-	width: 250px !important;
 }
 
 .friendlist tr td:first-of-type {
