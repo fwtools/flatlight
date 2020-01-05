@@ -139,8 +139,8 @@ a[href^="main.php?action=whisperuser&act_user_id="]:after { content: "\f075"; }
 /* /FLÜSTERN */
 
 /* GROUP */
-img[src$="group.gif"] { display: none; }
-a[href^="fight.php?action=groupinvite&act_user_id="]:after { content: "\f0c0"; }
+img[src$="group.gif"], img[src$="group2.gif"] { display: none; }
+a[href^="fight.php?action=groupinvite&act_user_id="]:after, a[href*="clanmenu.php?action=groupfinder"]:after { content: "\f0c0"; }
 
 #listrow_group img[src$="group.gif"] { display: none; }
 a[href^="fight.php?action=groupjoinrand"]:before { content: "\f0c0"; }
