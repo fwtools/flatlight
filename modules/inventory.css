@@ -91,6 +91,6 @@
 #listrow_special a:before { font-size: 12px; content: "Spezial"; }
 #listrow_status { min-height: 0; }
 #listrow_special + #listrow_status { min-height: 18px; margin-top: -18px; text-indent: 40px; background: #eee; }
-#listrow_neck + #listrow_special + #listrow_status { background: transparent; }
+#listrow_ring + #listrow_special + #listrow_status { background: transparent; }
 #listrow_status .small { font-size: 12px; }
 /* /SPECIAL & STATUS */
