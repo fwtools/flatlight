@@ -36,7 +36,7 @@
 #listrow_char_mission a:nth-of-type(2):after { font-size: 12px; content: "Auftrag"; }
 #listrow_clan a { font-size: 12px; }
 #listrow_clan b { display: none; }
-#listrow_clan a:nth-of-type(1):not(:last-child) { padding-right: 50%; }
+#listrow_clan a:nth-of-type(1):last-child { padding-right: 50%; }
 /* /TABLECELLS */
 
 /* GROUP */
