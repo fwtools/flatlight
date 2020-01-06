@@ -13,7 +13,7 @@
 /* /GENERAL */
 
 /* COLORS */
-#listrow_clan, #listrow_int, #listrow_defensep, #listrow_special { background: #eee; }
+#listrow_clan, #listrow_int, #listrow_defensep, #listrow_ring, #listrow_neck + #lisrow_special { background: #eee; }
 #listrow_aka_battlep { background: #3498db; color: #eee; text-align: center;
     border-bottom: 1px solid rgba(0,0,0,.2); font-size: 10px; }
 #listrow_aka_battlep a { color: #fff; }
@@ -27,7 +27,7 @@
 
 /* TABLECELLS */
 #listrow_char_mission a, #listrow_clan a { display: table-cell; width: 50%;
-    text-align: center; padding: 0 2px; margin: 0; height: 18px; line-height: 18px; }
+    text-align: center; padding: 0 2px; margin: 0; height: 22px; line-height: 18px; }
 #listrow_char_mission a:nth-of-type(1), #listrow_clan a:nth-of-type(1) {
     border-right: 1px solid rgba(0,0,0,.1); }
 #listrow_char_mission a { font-size: 0; }
@@ -91,5 +91,6 @@
 #listrow_special a:before { font-size: 12px; content: "Spezial"; }
 #listrow_status { min-height: 0; }
 #listrow_special + #listrow_status { min-height: 18px; margin-top: -18px; text-indent: 40px; background: #eee; }
+#listrow_neck + #lisrow_special + #listrow_status { background: transparent; }
 #listrow_status .small { font-size: 12px; }
 /* /SPECIAL & STATUS */
